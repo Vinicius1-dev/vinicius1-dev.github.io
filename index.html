@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark" data-lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinícius Alves – Desenvolvedor em Formação</title>
+  
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+  </script>
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Efeito de luz suave que acompanha o cursor -->
+  <div id="cursor-glow"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">Vinícius Alves</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio"      class="nav-link" data-i18n="nav.home">Início</a></li>
+        <li><a href="#habilidades" class="nav-link" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="#experiencia" class="nav-link" data-i18n="nav.experience">Experiência</a></li>
+        <li><a href="#projetos"    class="nav-link" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="#contato"     class="nav-link" data-i18n="nav.contact">Contato</a></li>
+      </ul>
+
+      <!-- Controles: idioma + tema -->
+      <div class="nav-controls">
+        <!-- Seletor de idioma -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btnPT" aria-label="Português">
+            <span class="flag">🇧🇷</span>
+          </button>
+          <button class="lang-btn" id="btnEN" aria-label="English">
+            <span class="flag">🇺🇸</span>
+          </button>
+        </div>
+        <!-- Botão tema claro/escuro -->
+        <button class="theme-btn" id="themeToggle" aria-label="Alternar tema">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-avatar">
+        <img src="vinicius.jpg" alt="Foto de Vinícius Alves" />
+      </div>
+      <p class="hero-greeting" data-i18n="hero.greeting">Olá, eu sou</p>
+      <h1 class="hero-title">Vinícius Alves</h1>
+      <h2 class="hero-subtitle" data-i18n="hero.subtitle">Análise de Dados | Tecnologia</h2>
+      <p class="hero-description" data-i18n="hero.description">
+        Sou estudante do Ensino Médio e estou em formação na área de tecnologia.
+        Tenho foco em desenvolvimento de software e análise de dados, buscando
+        evolução constante por meio de projetos práticos e estudos estruturados.
+      </p>
+      <div class="hero-actions">
+        <a href="#projetos" class="btn btn-primary" data-i18n="hero.btnProjects">Ver Projetos</a>
+        <a href="#contato"  class="btn btn-outline" data-i18n="hero.btnContact">Entrar em Contato</a>
+      </div>
+    </div>
+    <div class="hero-particles" id="heroParticles"></div>
+  </section>
+
+  <!-- ========== HABILIDADES ========== -->
+  <section id="habilidades" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="skills.title">Expertise Técnica</h2>
+        <p class="section-subtitle" data-i18n="skills.subtitle">Tecnologias que estou estudando e aplicando em projetos pessoais</p>
+      </div>
+      <div class="skills-grid">
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+          <h3 class="skill-name">Python</h3>
+          <p class="skill-desc" data-i18n="skills.python">
+            Lógica de programação, scripts de automação e introdução ao desenvolvimento back-end com Python.
+          </p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+          <h3 class="skill-name">TypeScript</h3>
+          <p class="skill-desc" data-i18n="skills.typescript">
+            Realizando curso de TypeScript, aprendendo tipagem estática e boas práticas de desenvolvimento orientado a tipos.
+          </p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+          <h3 class="skill-name">Git &amp; GitHub</h3>
+          <p class="skill-desc" data-i18n="skills.git">
+            Controle de versão, criação de repositórios, commits e versionamento de projetos com Git e GitHub.
+          </p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3 class="skill-name" data-i18n="skills.logicName">Lógica de Programação</h3>
+          <p class="skill-desc" data-i18n="skills.logic">
+            Estudo de algoritmos, estruturas de controle e resolução de problemas com raciocínio lógico estruturado.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIÊNCIA (TIMELINE) ========== -->
+  <section id="experiencia" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="exp.title">Experiência</h2>
+        <p class="section-subtitle" data-i18n="exp.subtitle">Minha jornada no mundo da tecnologia</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item left reveal">
+          <div class="timeline-card">
+            <span class="timeline-date" data-i18n="exp.edu.date">2025 – Conclusão prevista</span>
+            <h3 class="timeline-title" data-i18n="exp.edu.title">Formação – Ensino Médio</h3>
+            <p class="timeline-desc" data-i18n="exp.edu.desc">
+              Cursando o 3º ano do Ensino Médio com foco paralelo em tecnologia.
+              Buscando evolução constante por meio de estudos estruturados e projetos práticos.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag" data-i18n="exp.edu.tag1">Ensino Médio – 3º ano</span>
+              <span class="tag" data-i18n="exp.edu.tag2">Conclusão: 2025</span>
+            </div>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+        <div class="timeline-item right reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date" data-i18n="exp.tech.date">Experiência técnica</span>
+            <h3 class="timeline-title" data-i18n="exp.tech.title">Em Desenvolvimento</h3>
+            <p class="timeline-desc" data-i18n="exp.tech.desc">
+              Atualmente construindo projetos próprios e aprimorando habilidades técnicas.
+              Estudando Python, lógica de programação, Git, GitHub e realizando curso de TypeScript.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Python</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item left reveal">
+          <div class="timeline-card">
+            <span class="timeline-date" data-i18n="exp.continuous.date">Desenvolvimento contínuo</span>
+            <h3 class="timeline-title" data-i18n="exp.continuous.title">Projetos Pessoais</h3>
+            <p class="timeline-desc" data-i18n="exp.continuous.desc">
+              Desenvolvendo projetos próprios para portfólio. Aplicando conhecimentos adquiridos
+              nos estudos para consolidar o aprendizado de forma prática.
+            </p>
+            <ul class="timeline-list">
+              <li data-i18n="exp.continuous.li1">Estudando Python</li>
+              <li data-i18n="exp.continuous.li2">Aprendendo lógica de programação</li>
+              <li data-i18n="exp.continuous.li3">Praticando Git e GitHub</li>
+              <li data-i18n="exp.continuous.li4">Realizando curso de TypeScript</li>
+              <li data-i18n="exp.continuous.li5">Desenvolvendo projetos próprios para portfólio</li>
+            </ul>
+          </div>
+          <div class="timeline-dot"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJETOS ========== -->
+  <section id="projetos" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+        <p class="section-subtitle" data-i18n="projects.subtitle">Projetos desenvolvidos durante minha formação</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <iframe src="assets/portfolio-images/gaming-project-cover.html" class="project-img-frame" frameborder="0" scrolling="no"></iframe>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name" data-i18n="projects.snake.name">Jogo da Cobrinha</h3>
+            <p class="project-desc" data-i18n="projects.snake.desc">
+              Jogo desenvolvido em Python com foco em lógica de programação,
+              controle de eventos e organização de código.
+            </p>
+            <div class="project-tags"><span class="tag">Python</span></div>
+            <a href="https://github.com/Vinicius1-dev/cobra" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fa-brands fa-github"></i> <span data-i18n="projects.btnGithub">Ver no GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <iframe src="assets/cards/calculadora.html" alt="Calculadora" class="card-image" frameborder="0" scrolling="no"></iframe>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Calculadora</h3>
+            <p class="project-desc" data-i18n="projects.system.desc">
+              Calculadora desenvolvida em Python, com foco em lógica de programação e manipulação de operações matemáticas. O projeto realiza cálculos básicos e demonstra organização e funcionamento da aplicação.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Git</span>
+            </div>
+            <a href="https://github.com/Vinicius1-dev/-calculadora-python/tree/main" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fa-brands fa-github"></i> <span data-i18n="projects.btnGithub">Ver no GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <iframe src="assets/portfolio-images/data-project-cover.html" class="project-img-frame" frameborder="0" scrolling="no"></iframe>
+          </div>
+          <div class="project-body">
+            <h3 class="project-name" data-i18n="projects.data.name">Projeto de Análise de Dados</h3>
+            <p class="project-desc" data-i18n="projects.data.desc">
+              Projeto focado em manipulação e análise de dados utilizando Python para extração de insights.
+            </p>
+            <div class="project-tags"><span class="tag">Python</span></div>
+            <a href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fa-brands fa-github"></i> <span data-i18n="projects.btnGithub">Ver no GitHub</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTATO ========== -->
+  <section id="contato" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="contact.title">Contato</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">Vamos conversar? Entre em contato por qualquer canal abaixo</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <a href="mailto:viniciuscleberalves@gmail.com" class="contact-card reveal">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <h3 class="contact-label">E-mail</h3>
+          <p class="contact-value">viniciuscleberalves@gmail.com</p>
+        </a>
+
+        <a href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+          <h3 class="contact-label">GitHub</h3>
+          <p class="contact-value">github.com/Vinicius1-dev</p>
+        </a>
+
+        <a href="https://linkedin.com/in/vinicius-alves-silva-b666b6364" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+          <h3 class="contact-label">LinkedIn</h3>
+          <p class="contact-value">linkedin.com/in/vinicius-alves-silva</p>
+        </a>
+
+      </div>
+
+      <div class="contact-cta reveal">
+        <a href="mailto:viniciuscleberalves@gmail.com" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-paper-plane"></i> <span data-i18n="contact.btnSend">Enviar Mensagem</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p data-i18n="footer.text">&copy; 2026 Vinícius Alves &ndash; Desenvolvedor em Formação</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
