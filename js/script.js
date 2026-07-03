@@ -48,6 +48,13 @@ function setActiveNavLink() {
   });
 }
 
+function handleHeaderScroll() {
+  const header = document.querySelector('.site-header');
+  if (header) {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+  }
+}
+
 function setCurrentYear() {
   if (currentYear) {
     currentYear.textContent = new Date().getFullYear();
@@ -62,6 +69,7 @@ function initialize() {
   navLinks.forEach((link) => link.addEventListener('click', closeMobileMenu));
   
   window.addEventListener('scroll', setActiveNavLink);
+  window.addEventListener('scroll', handleHeaderScroll);
 }
 
 window.addEventListener('DOMContentLoaded', initialize);
