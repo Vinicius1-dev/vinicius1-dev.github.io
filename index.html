@@ -1,1017 +1,327 @@
-﻿<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark" data-lang="pt">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta
-    name="description"
-    content="Portfólio de Vinícius Alves, desenvolvedor Python e analista de dados em formação."
-  >
-
-  <title>Vinícius Alves | Desenvolvedor Python e Analista de Dados</title>
-
-  <style>
-    :root {
-      --bg: #f6f8fb;
-      --card: #ffffff;
-      --text: #101828;
-      --muted: #667085;
-      --line: #e1e6ed;
-      --blue: #2563eb;
-      --blue-dark: #1d4ed8;
-      --dark: #0f172a;
-      --radius: 16px;
-      --max-width: 1120px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 82px;
-    }
-
-    body {
-      min-width: 320px;
-      overflow-x: hidden;
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.65;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    ul {
-      list-style: none;
-    }
-
-    .container {
-      width: min(calc(100% - 40px), var(--max-width));
-      margin: auto;
-    }
-
-    /* CABEÇALHO */
-
-    .header {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 20;
-      border-bottom: 1px solid var(--line);
-      background: rgba(246, 248, 251, 0.94);
-      backdrop-filter: blur(12px);
-    }
-
-    .header-inner {
-      height: 74px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 800;
-    }
-
-    .brand::before {
-      content: "VA";
-      display: grid;
-      width: 38px;
-      height: 38px;
-      place-items: center;
-      border-radius: 10px;
-      background: var(--dark);
-      color: white;
-      font-size: 12px;
-    }
-
-    .nav {
-      display: flex;
-      gap: 6px;
-    }
-
-    .nav a {
-      padding: 9px 12px;
-      border-radius: 8px;
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .nav a:hover,
-    .nav a.active {
-      background: #e9eef5;
-      color: var(--text);
-    }
-
-    .menu {
-      display: none;
-      width: 42px;
-      height: 42px;
-      border: 0;
-      border-radius: 10px;
-      background: #e9eef5;
-      cursor: pointer;
-    }
-
-    .menu span {
-      display: block;
-      width: 20px;
-      height: 2px;
-      margin: 5px auto;
-      background: var(--dark);
-    }
-
-    /* INÍCIO */
-
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      align-items: center;
-      padding: 126px 0 76px;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.75fr;
-      align-items: center;
-      gap: 84px;
-    }
-
-    .eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--blue);
-      font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow::before {
-      content: "";
-      width: 28px;
-      height: 2px;
-      background: var(--blue);
-    }
-
-    h1 {
-      margin-top: 18px;
-      font-size: clamp(50px, 7vw, 78px);
-      line-height: 0.96;
-      letter-spacing: -0.06em;
-    }
-
-    .role {
-      margin-top: 24px;
-      font-size: clamp(19px, 2.2vw, 24px);
-      font-weight: 700;
-    }
-
-    .intro {
-      max-width: 650px;
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 30px;
-    }
-
-    .btn {
-      display: inline-flex;
-      min-height: 48px;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid transparent;
-      border-radius: 10px;
-      padding: 0 20px;
-      font-weight: 800;
-      transition: 0.2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .primary {
-      background: var(--blue);
-      color: white;
-    }
-
-    .primary:hover {
-      background: var(--blue-dark);
-    }
-
-    .secondary {
-      border-color: var(--line);
-      background: white;
-    }
-
-    .social {
-      display: flex;
-      gap: 22px;
-      margin-top: 25px;
-    }
-
-    .social a {
-      color: var(--muted);
-      font-size: 14px;
-      font-weight: 700;
-    }
-
-    .social a:hover {
-      color: var(--blue);
-    }
-
-    .photo {
-      position: relative;
-    }
-
-    .photo::before {
-      content: "";
-      position: absolute;
-      inset: 22px -22px -22px 22px;
-      z-index: -1;
-      border-radius: 20px;
-      background: #dbe7ff;
-    }
-
-    .photo img {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center 30%;
-      border: 1px solid var(--line);
-      border-radius: 20px;
-      box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
-    }
-
-    /* SEÇÕES */
-
-    section {
-      padding: 105px 0;
-    }
-
-    .alt {
-      background: #edf1f6;
-    }
-
-    .section-title {
-      font-size: clamp(36px, 5vw, 54px);
-      line-height: 1;
-      letter-spacing: -0.05em;
-    }
-
-    /* SOBRE */
-
-    .about {
-      display: grid;
-      grid-template-columns: 0.65fr 1.35fr;
-      gap: 100px;
-    }
-
-    .about-copy p {
-      color: var(--muted);
-      font-size: 17px;
-    }
-
-    .about-copy p + p {
-      margin-top: 18px;
-    }
-
-    .info {
-      margin-top: 34px;
-      border-top: 1px solid var(--line);
-    }
-
-    .info li {
-      display: grid;
-      grid-template-columns: 130px 1fr;
-      gap: 20px;
-      border-bottom: 1px solid var(--line);
-      padding: 16px 0;
-      color: var(--muted);
-    }
-
-    .info strong {
-      color: var(--text);
-    }
-
-    /* PROJETOS */
-
-    .projects-head {
-      margin-bottom: 42px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-    }
-
-    .project {
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: var(--card);
-      transition: 0.25s;
-    }
-
-    .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1);
-    }
-
-    .project-img {
-      height: 250px;
-      border-bottom: 1px solid var(--line);
-      background: #111827;
-    }
-
-    .project-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      padding: 18px;
-    }
-
-    .project-body {
-      padding: 25px;
-    }
-
-    .project h3 {
-      font-size: 21px;
-    }
-
-    .project p {
-      min-height: 75px;
-      margin-top: 11px;
-      color: var(--muted);
-    }
-
-    .project-foot {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-      margin-top: 22px;
-    }
-
-    .tag {
-      border-radius: 7px;
-      background: #edf1f6;
-      padding: 6px 10px;
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .project-link {
-      color: var(--blue);
-      font-size: 14px;
-      font-weight: 800;
-    }
-
-    .project-link:hover {
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-    /* FORMAÇÃO */
-
-    .formation {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 24px;
-      margin-top: 42px;
-    }
-
-    .panel {
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      background: white;
-      padding: 36px;
-    }
-
-    .panel h3 {
-      font-size: 19px;
-    }
-
-    .panel p {
-      margin-top: 13px;
-      color: var(--muted);
-    }
-
-    .tech {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
-      margin-top: 18px;
-    }
-
-    .tech li {
-      border-bottom: 1px solid var(--line);
-      padding: 11px 0;
-      font-weight: 700;
-    }
-
-    .tech li::before {
-      content: "";
-      display: inline-block;
-      width: 7px;
-      height: 7px;
-      margin-right: 9px;
-      border-radius: 50%;
-      background: var(--blue);
-    }
-
-    /* CONTATO */
-
-    .contact {
-      background: var(--dark);
-      color: white;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 0.85fr;
-      align-items: center;
-      gap: 90px;
-    }
-
-    .contact .section-title {
-      color: white;
-    }
-
-    .contact-text {
-      margin-top: 20px;
-      color: #cbd5e1;
-      font-size: 17px;
-    }
-
-    .contact .btn {
-      margin-top: 26px;
-      background: white;
-      color: var(--dark);
-    }
-
-    .contact-list {
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
-    }
-
-    .contact-list a {
-      display: grid;
-      grid-template-columns: 82px 1fr auto;
-      gap: 14px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 17px 0;
-      color: #dbe4f0;
-      font-size: 14px;
-    }
-
-    .contact-list strong {
-      color: white;
-      font-size: 12px;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-    }
-
-    footer {
-      background: #0a1120;
-      color: #98a2b3;
-      padding: 23px 0;
-      font-size: 14px;
-    }
-
-    /* TABLET */
-
-    @media (max-width: 880px) {
-      .hero-grid,
-      .about,
-      .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 52px;
-      }
-
-      .photo {
-        max-width: 400px;
-      }
-
-      .about {
-        gap: 30px;
-      }
-
-      .contact-grid {
-        gap: 46px;
-      }
-    }
-
-    /* CELULAR */
-
-    @media (max-width: 720px) {
-      .container {
-        width: min(calc(100% - 30px), var(--max-width));
-      }
-
-      .header-inner {
-        height: 68px;
-      }
-
-      .menu {
-        display: block;
-      }
-
-      .nav {
-        position: fixed;
-        inset: 68px 0 auto;
-        display: grid;
-        transform: translateY(-120%);
-        border-bottom: 1px solid var(--line);
-        background: white;
-        padding: 14px;
-        opacity: 0;
-        pointer-events: none;
-        transition: 0.2s;
-      }
-
-      .nav.open {
-        transform: translateY(0);
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      .nav a {
-        text-align: center;
-      }
-
-      .hero {
-        min-height: auto;
-        padding-top: 112px;
-      }
-
-      .grid,
-      .formation {
-        grid-template-columns: 1fr;
-      }
-
-      .project p {
-        min-height: auto;
-      }
-
-      .project-img {
-        height: 220px;
-      }
-
-      .info li {
-        grid-template-columns: 1fr;
-        gap: 4px;
-      }
-
-      .contact-list a {
-        grid-template-columns: 75px 1fr auto;
-      }
-    }
-
-    @media (max-width: 460px) {
-      h1 {
-        font-size: 48px;
-      }
-
-      .actions {
-        flex-direction: column;
-      }
-
-      .actions .btn {
-        width: 100%;
-      }
-
-      .project-foot {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .tech {
-        grid-template-columns: 1fr;
-      }
-
-      .contact-list a {
-        grid-template-columns: 1fr auto;
-      }
-
-      .contact-list strong {
-        grid-column: 1 / -1;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinícius Alves – Desenvolvedor em Formação</title>
+  
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      anonymize_ip: true,
+      cookie_flags: 'SameSite=None;Secure'
+    });
+  </script>
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio">Vinícius Alves</a>
 
-      <button
-        class="menu"
-        id="menu"
-        aria-label="Abrir menu"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
+  <!-- Efeito de luz suave que acompanha o cursor -->
+  <div id="cursor-glow"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo">Vinícius Alves</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav" id="nav">
-        <a class="active" href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
-      </nav>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio"      class="nav-link" data-i18n="nav.home">Início</a></li>
+        <li><a href="#habilidades" class="nav-link" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="#experiencia" class="nav-link" data-i18n="nav.experience">Experiência</a></li>
+        <li><a href="#projetos"    class="nav-link" data-i18n="nav.projects">Projetos</a></li>
+        <li><a href="#contato"     class="nav-link" data-i18n="nav.contact">Contato</a></li>
+      </ul>
+
+      <!-- Controles: idioma + tema -->
+      <div class="nav-controls">
+        <!-- Seletor de idioma -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" id="btnPT" aria-label="Português">
+            <span class="flag">🇧🇷</span>
+          </button>
+          <button class="lang-btn" id="btnEN" aria-label="English">
+            <span class="flag">🇺🇸</span>
+          </button>
+        </div>
+        <!-- Botão tema claro/escuro -->
+        <button class="theme-btn" id="themeToggle" aria-label="Alternar tema">
+          <i class="fa-solid fa-moon" id="themeIcon"></i>
+        </button>
+      </div>
     </div>
-  </header>
+  </nav>
 
-  <main>
-    <section class="hero" id="inicio">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Olá, eu sou</p>
-
-          <h1>Vinícius Alves</h1>
-
-          <p class="role">
-            Desenvolvedor Python e Analista de Dados em formação
-          </p>
-
-          <p class="intro">
-            Desenvolvo projetos com Python, SQL e tecnologias web,
-            aplicando programação para resolver problemas e trabalhar
-            com dados. Busco minha primeira oportunidade na área de
-            tecnologia.
-          </p>
-
-          <div class="actions">
-            <a class="btn primary" href="#projetos">Ver projetos</a>
-            <a class="btn secondary" href="#contato">Entrar em contato</a>
-          </div>
-
-          <div class="social">
-            <a
-              href="https://github.com/Vinicius1-dev"
-              target="_blank"
-              rel="noopener"
-            >
-              GitHub
-            </a>
-
-            <a
-              href="https://linkedin.com/in/vinicius-alves-silva-b666b6364"
-              target="_blank"
-              rel="noopener"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-
-        <div class="photo">
-          <img
-            src="vinicius.jpg"
-            alt="Foto profissional de Vinícius Alves"
-          >
-        </div>
+  <!-- ========== HERO ========== -->
+  <section id="inicio" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-avatar">
+        <img src="vinicius.jpg" alt="Foto de Vinícius Alves" />
       </div>
-    </section>
-
-    <section id="sobre">
-      <div class="container about">
-        <h2 class="section-title">Sobre mim</h2>
-
-        <div class="about-copy">
-          <p>
-            Sou estudante do 3º ano do Ensino Médio, com foco em
-            desenvolvimento de software e análise de dados. Aprendo por
-            meio de cursos, exercícios e projetos práticos, buscando
-            oportunidades para aplicar meus conhecimentos com
-            responsabilidade e qualidade.
-          </p>
-
-          <p>
-            Tenho interesse em desenvolvimento de software e análise de
-            dados. A cada projeto, procuro consolidar o aprendizado em
-            Python, SQL, Git e tecnologias web. Meu objetivo é encontrar
-            minha primeira experiência profissional ou estágio e
-            continuar evoluindo no universo da tecnologia.
-          </p>
-
-          <ul class="info">
-            <li>
-              <strong>Formação</strong>
-              <span>
-                3º ano do Ensino Médio — conclusão prevista para 2026
-              </span>
-            </li>
-
-            <li>
-              <strong>Localização</strong>
-              <span>Brasil</span>
-            </li>
-
-            <li>
-              <strong>Objetivo</strong>
-              <span>Estágio ou primeira oportunidade em tecnologia</span>
-            </li>
-          </ul>
-        </div>
+      <p class="hero-greeting" data-i18n="hero.greeting">Olá, eu sou</p>
+      <h1 class="hero-title">Vinícius Alves</h1>
+      <h2 class="hero-subtitle" data-i18n="hero.subtitle">Análise de Dados | Tecnologia</h2>
+      <p class="hero-description" data-i18n="hero.description">
+        Sou estudante do Ensino Médio e estou em formação na área de tecnologia.
+        Tenho foco em desenvolvimento de software e análise de dados, buscando
+        evolução constante por meio de projetos práticos e estudos estruturados.
+      </p>
+      <div class="hero-actions">
+        <a href="#projetos" class="btn btn-primary" data-i18n="hero.btnProjects">Ver Projetos</a>
+        <a href="#contato"  class="btn btn-outline" data-i18n="hero.btnContact">Entrar em Contato</a>
       </div>
-    </section>
+    </div>
+    <div class="hero-particles" id="heroParticles"></div>
+  </section>
 
-    <section class="alt" id="projetos">
-      <div class="container">
-        <div class="projects-head">
-          <h2 class="section-title">Projetos</h2>
-        </div>
-
-        <div class="grid">
-          <article class="project">
-            <div class="project-img">
-              <img
-                src="assets/images/cobrinha.png"
-                alt="Jogo da cobrinha em Python"
-              >
-            </div>
-
-            <div class="project-body">
-              <h3>Jogo da Cobrinha</h3>
-
-              <p>
-                Jogo desenvolvido em Python com foco em controle de
-                eventos, regras de jogo e organização do código.
-              </p>
-
-              <div class="project-foot">
-                <span class="tag">Python</span>
-
-                <a
-                  class="project-link"
-                  href="https://github.com/Vinicius1-dev/cobra"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Ver no GitHub ↗
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-img">
-              <img
-                src="assets/images/calculadora.png"
-                alt="Calculadora em Python"
-              >
-            </div>
-
-            <div class="project-body">
-              <h3>Calculadora</h3>
-
-              <p>
-                Aplicação desenvolvida em Python para executar operações
-                matemáticas básicas com validação de entradas.
-              </p>
-
-              <div class="project-foot">
-                <span class="tag">Python</span>
-
-                <a
-                  class="project-link"
-                  href="https://github.com/Vinicius1-dev/calculadora-python/tree/main"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Ver no GitHub ↗
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-img">
-              <img
-                src="assets/images/sql.png"
-                alt="Análise de vendas com SQL"
-              >
-            </div>
-
-            <div class="project-body">
-              <h3>Análise de Vendas com SQL</h3>
-
-              <p>
-                Projeto de análise de vendas que utiliza consultas SQL
-                para extrair KPIs e comportamento de clientes.
-              </p>
-
-              <div class="project-foot">
-                <span class="tag">SQL</span>
-
-                <a
-                  class="project-link"
-                  href="https://github.com/Vinicius1-dev/analise-vendas-sql"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Ver no GitHub ↗
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project">
-            <div class="project-img">
-              <img
-                src="assets/images/automacao.png"
-                alt="Automação de relatório de vendas"
-              >
-            </div>
-
-            <div class="project-body">
-              <h3>Automação de Relatório de Vendas</h3>
-
-              <p>
-                Projeto em Python que automatiza a análise de dados de
-                vendas, gerando relatórios a partir de planilhas CSV.
-              </p>
-
-              <div class="project-foot">
-                <span class="tag">Python</span>
-
-                <a
-                  class="project-link"
-                  href="https://github.com/Vinicius1-dev/Projeto-automa-o-vendas-com-Python"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Ver no GitHub ↗
-                </a>
-              </div>
-            </div>
-          </article>
-        </div>
+  <!-- ========== HABILIDADES ========== -->
+  <section id="habilidades" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="skills.title">Experiência Técnica</h2>
+        <p class="section-subtitle" data-i18n="skills.subtitle">Tecnologias que estou estudando e aplicando em projetos pessoais</p>
       </div>
-    </section>
+      <div class="skills-grid">
 
-    <section id="formacao">
-      <div class="container">
-        <h2 class="section-title">Formação e Tecnologias</h2>
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+          <h3 class="skill-name">Python</h3>
+          <p class="skill-desc" data-i18n="skills.python">
+            Lógica de programação, scripts de automação e introdução ao desenvolvimento back-end com Python.
+          </p>
+        </div>
 
-        <div class="formation">
-          <div class="panel">
-            <h3>Formação</h3>
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+          <h3 class="skill-name">TypeScript</h3>
+          <p class="skill-desc" data-i18n="skills.typescript">
+            Realizando curso de TypeScript, aprendendo tipagem estática e boas práticas de desenvolvimento orientado a tipos.
+          </p>
+        </div>
 
-            <p>
-              3º ano do Ensino Médio — conclusão prevista para 2026
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+          <h3 class="skill-name">Git &amp; GitHub</h3>
+          <p class="skill-desc" data-i18n="skills.git">
+            Controle de versão, criação de repositórios, commits e versionamento de projetos com Git e GitHub.
+          </p>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+          <h3 class="skill-name" data-i18n="skills.logicName">Lógica de Programação</h3>
+          <p class="skill-desc" data-i18n="skills.logic">
+            Estudo de algoritmos, estruturas de controle e resolução de problemas com raciocínio lógico estruturado.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIÊNCIA (TIMELINE) ========== -->
+  <section id="experiencia" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="exp.title">Experiência</h2>
+        <p class="section-subtitle" data-i18n="exp.subtitle">Minha jornada no mundo da tecnologia</p>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item left reveal">
+          <div class="timeline-card">
+            <span class="timeline-date" data-i18n="exp.edu.date">2026 – CONCLUSÃO PREVISTA</span>
+            <h3 class="timeline-title" data-i18n="exp.edu.title">Formação – Ensino Médio</h3>
+            <p class="timeline-desc" data-i18n="exp.edu.desc">
+              Cursando o 3º ano do Ensino Médio com foco paralelo em tecnologia.
+              Buscando evolução constante por meio de estudos estruturados e projetos práticos.
             </p>
-
-            <p>Cursos de Python, SQL e desenvolvimento web</p>
+            <div class="timeline-tags">
+              <span class="tag" data-i18n="exp.edu.tag1">Ensino Médio – 3º ano</span>
+              <span class="tag" data-i18n="exp.edu.tag2">Conclusão: 2026</span>
+            </div>
           </div>
+          <div class="timeline-dot"></div>
+        </div>
 
-          <div class="panel">
-            <h3>Tecnologias</h3>
+        <div class="timeline-item right reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date" data-i18n="exp.tech.date">Experiência técnica</span>
+            <h3 class="timeline-title" data-i18n="exp.tech.title">Em Desenvolvimento</h3>
+            <p class="timeline-desc" data-i18n="exp.tech.desc">
+              Finalizei estudos em Python e lógica de programação, com foco em desenvolvimento de aplicações.
+              Atualmente estudando SQL para manipulação de dados e JavaScript para desenvolvimento web.
+            </p>
+            <div class="timeline-tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+            </div>
+          </div>
+        </div>
 
-            <ul class="tech">
-              <li>Python</li>
-              <li>SQL</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>Git</li>
-              <li>GitHub</li>
+        <div class="timeline-item left reveal">
+          <div class="timeline-card">
+            <span class="timeline-date" data-i18n="exp.continuous.date">Desenvolvimento contínuo</span>
+            <h3 class="timeline-title" data-i18n="exp.continuous.title">Projetos Pessoais</h3>
+            <p class="timeline-desc" data-i18n="exp.continuous.desc">
+              Desenvolvendo projetos próprios para portfólio. Aplicando conhecimentos adquiridos
+              nos estudos para consolidar o aprendizado de forma prática.
+            </p>
+            <ul class="timeline-list">
+              <li data-i18n="exp.continuous.li1">Estudando SQL</li>
+              <li data-i18n="exp.continuous.li2">Aprendendo JavaScript</li>
+              <li data-i18n="exp.continuous.li3">Praticando Git e GitHub</li>
+              <li data-i18n="exp.continuous.li4">Realizando curso de TypeScript</li>
+              <li data-i18n="exp.continuous.li5">Desenvolvendo projetos próprios para portfólio</li>
             </ul>
           </div>
+          <div class="timeline-dot"></div>
         </div>
+
       </div>
-    </section>
-
-    <section class="contact" id="contato">
-      <div class="container contact-grid">
-        <div>
-          <h2 class="section-title">Contato</h2>
-
-          <p class="contact-text">
-            Vamos conversar? Estou disponível para oportunidades de
-            estágio e aprendizado.
-          </p>
-
-          <a
-            class="btn"
-            href="mailto:viniciuscleberalves@gmail.com"
-          >
-            Enviar e-mail
-          </a>
-        </div>
-
-        <div class="contact-list">
-          <a href="mailto:viniciuscleberalves@gmail.com">
-            <strong>E-mail</strong>
-            <span>viniciuscleberalves@gmail.com</span>
-            <span>↗</span>
-          </a>
-
-          <a
-            href="https://github.com/Vinicius1-dev"
-            target="_blank"
-            rel="noopener"
-          >
-            <strong>GitHub</strong>
-            <span>github.com/Vinicius1-dev</span>
-            <span>↗</span>
-          </a>
-
-          <a
-            href="https://linkedin.com/in/vinicius-alves-silva-b666b6364"
-            target="_blank"
-            rel="noopener"
-          >
-            <strong>LinkedIn</strong>
-            <span>linkedin.com/in/vinicius-alves-silva</span>
-            <span>↗</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      © <span id="year"></span> Vinícius Alves
     </div>
+  </section>
+
+  <!-- ========== PROJETOS ========== -->
+  <section id="projetos" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
+        <p class="section-subtitle" data-i18n="projects.subtitle">Projetos desenvolvidos durante minha formação</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="assets/images/cobrinha.png" alt="Jogo da Cobrinha" class="project-image">
+          </div>
+          <div class="project-body">
+            <h3 class="project-name" data-i18n="projects.snake.name">Jogo da Cobrinha</h3>
+            <p class="project-desc" data-i18n="projects.snake.desc">
+              Jogo desenvolvido em Python com foco em lógica de programação,
+              controle de eventos e organização de código.
+            </p>
+            <div class="project-tags"><span class="tag">Python</span></div>
+            <a href="https://github.com/Vinicius1-dev/cobra" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fa-brands fa-github"></i> <span data-i18n="projects.btnGithub">Ver no GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="assets/images/calculadora.png" alt="Calculadora" class="project-image">
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Calculadora</h3>
+            <p class="project-desc" data-i18n="projects.system.desc">
+              Calculadora desenvolvida em Python, com foco em lógica de programação e manipulação de operações matemáticas. O projeto realiza cálculos básicos e demonstra organização e funcionamento da aplicação.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Git</span>
+            </div>
+            <a href="https://github.com/Vinicius1-dev/-calculadora-python/tree/main" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fa-brands fa-github"></i> <span data-i18n="projects.btnGithub">Ver no GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="assets/images/sql.png" alt="Análise de Vendas com SQL" class="project-image">
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Análise de Vendas com SQL</h3>
+            <p class="project-desc">
+              Projeto de análise de vendas utilizando SQL para extrair insights como faturamento total, produtos mais vendidos e comportamento dos clientes.
+            </p>
+            <div class="project-tags"><span class="tag">SQL</span></div>
+            <a href="https://github.com/Vinicius1-dev/analise-vendas-sql" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fa-brands fa-github"></i> <span data-i18n="projects.btnGithub">Ver no GitHub</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-image">
+            <img src="assets/images/automacao.png" alt="Automação de Relatório de Vendas com Python" class="project-image">
+          </div>
+          <div class="project-body">
+            <h3 class="project-name">Automação de Relatório de Vendas com Python</h3>
+            <p class="project-desc">
+              Projeto em Python que automatiza a análise de dados de vendas, realizando cálculos e gerando relatórios automaticamente a partir de arquivos CSV.
+            </p>
+            <div class="project-tags"><span class="tag">Python</span></div>
+            <a href="https://github.com/Vinicius1-dev/Projeto-automa-o-vendas-com-Python" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
+              <i class="fa-brands fa-github"></i> <span data-i18n="projects.btnGithub">Ver no GitHub</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTATO ========== -->
+  <section id="contato" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="contact.title">Contato</h2>
+        <p class="section-subtitle" data-i18n="contact.subtitle">Vamos conversar? Entre em contato por qualquer canal abaixo</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <a href="mailto:viniciuscleberalves@gmail.com" class="contact-card reveal">
+          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+          <h3 class="contact-label">E-mail</h3>
+          <p class="contact-value">viniciuscleberalves@gmail.com</p>
+        </a>
+
+        <a href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+          <h3 class="contact-label">GitHub</h3>
+          <p class="contact-value">github.com/Vinicius1-dev</p>
+        </a>
+
+        <a href="https://linkedin.com/in/vinicius-alves-silva-b666b6364" target="_blank" rel="noopener" class="contact-card reveal">
+          <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+          <h3 class="contact-label">LinkedIn</h3>
+          <p class="contact-value">linkedin.com/in/vinicius-alves-silva</p>
+        </a>
+
+      </div>
+
+      <div class="contact-cta reveal">
+        <a href="mailto:viniciuscleberalves@gmail.com" class="btn btn-primary btn-lg">
+          <i class="fa-solid fa-paper-plane"></i> <span data-i18n="contact.btnSend">Enviar Mensagem</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <p data-i18n="footer.text">&copy; 2026 Vinícius Alves &ndash; Desenvolvedor em Formação</p>
   </footer>
 
-  <script>
-    const menu = document.getElementById("menu");
-    const nav = document.getElementById("nav");
-    const links = [...nav.querySelectorAll("a")];
-
-    menu.addEventListener("click", () => {
-      const aberto = nav.classList.toggle("open");
-      menu.setAttribute("aria-expanded", aberto);
-    });
-
-    links.forEach((link) => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("open");
-        menu.setAttribute("aria-expanded", "false");
-      });
-    });
-
-    const sections = [
-      ...document.querySelectorAll("main section[id]")
-    ];
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
-          links.forEach((link) => {
-            link.classList.toggle(
-              "active",
-              link.hash === `#${entry.target.id}` 
-            );
-          });
-        });
-      },
-      {
-        rootMargin: "-35% 0px -55%"
-      }
-    );
-
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
