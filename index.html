@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -37,7 +37,7 @@
 <body>
   <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
 
-  <header id="header" class="site-header">
+  <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#inicio">Vinícius Alves</a>
       <div class="nav-wrapper">
@@ -48,335 +48,162 @@
           <ul class="nav-list" id="primary-navigation">
             <li><a class="nav-link active" href="#inicio">Início</a></li>
             <li><a class="nav-link" href="#sobre">Sobre</a></li>
-            <li><a class="nav-link" href="#habilidades">Habilidades</a></li>
-            <li><a class="nav-link" href="#formacao">Formação</a></li>
             <li><a class="nav-link" href="#projetos">Projetos</a></li>
             <li><a class="nav-link" href="#contato">Contato</a></li>
           </ul>
         </nav>
       </div>
-      <button id="themeToggle" class="theme-button" aria-label="Alternar tema" title="Alternar tema">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
-      </button>
     </div>
   </header>
 
   <main id="main-content">
     <section id="inicio" class="section hero">
       <div class="container hero-grid">
-        <div class="hero-copy reveal">
+        <div class="hero-content">
           <p class="eyebrow">Olá, eu sou</p>
-          <h1 class="hero-title">Vinícius Alves</h1>
+          <h1>Vinícius Alves</h1>
           <p class="hero-subtitle">Desenvolvedor Python e Analista de Dados em formação</p>
-          <p class="hero-text">Desenvolvo projetos utilizando Python, SQL e tecnologias web para transformar ideias e dados em soluções funcionais. Atualmente, estou aprofundando meus conhecimentos por meio de cursos e projetos práticos.</p>
+          <p class="hero-text">Desenvolvo projetos com Python, SQL e tecnologias web, aplicando programação para resolver problemas e trabalhar com dados. Busco minha primeira oportunidade na área de tecnologia.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#projetos">Ver projetos</a>
             <a class="btn btn-secondary" href="#contato">Entrar em contato</a>
           </div>
-          <div class="hero-meta">Disponível para estágio e oportunidades de aprendizado</div>
           <div class="hero-social">
-            <a href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0.297C5.373 0.297 0 5.67 0 12.297c0 5.292 3.438 9.786 8.205 11.387.6.113.82-.26.82-.577v-2.165c-3.338.726-4.033-1.61-4.033-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.997.108-.775.42-1.304.762-1.604-2.665-.304-5.467-1.333-5.467-5.93 0-1.31.468-2.381 1.235-3.222-.124-.303-.535-1.527.117-3.176 0 0 1.008-.323 3.3 1.23A11.51 11.51 0 0112 5.803c1.02.005 2.045.138 3.003.406 2.29-1.553 3.296-1.23 3.296-1.23.655 1.65.244 2.873.12 3.176.77.84 1.233 1.912 1.233 3.222 0 4.61-2.807 5.622-5.479 5.92.431.37.815 1.1.815 2.22v3.293c0 .32.218.694.825.576C20.565 22.078 24 17.587 24 12.297 24 5.67 18.627.297 12 .297z"/></svg></a>
-            <a href="https://linkedin.com/in/vinicius-alves-silva-b666b6364" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.48 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8.98h5V24H0V8.98zm7.5 0h4.78v2.14h.07c.67-1.26 2.3-2.58 4.73-2.58 5.05 0 5.98 3.33 5.98 7.66V24H18.5v-7.64c0-1.82-.03-4.16-2.54-4.16-2.54 0-2.93 1.98-2.93 4.02V24H7.5V8.98z"/></svg></a>
+            <a href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+            <a href="https://linkedin.com/in/vinicius-alves-silva-b666b6364" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
           </div>
         </div>
 
-        <div class="hero-visual reveal">
-          <div class="hero-photo">
-            <img src="vinicius.jpg" alt="Foto profissional de Vinícius Alves" loading="lazy" width="640" height="640" />
-          </div>
-          <div class="hero-card">
-            <h3>Sobre mim</h3>
-            <p>Estudante do 3º ano do Ensino Médio, com foco em desenvolvimento de software e análise de dados. Estou buscando minha primeira oportunidade profissional na área de tecnologia por meio de estudos e projetos práticos.</p>
-            <div class="badge">Python · SQL · GitHub</div>
-          </div>
+        <div class="hero-photo">
+          <img src="vinicius.jpg" alt="Foto profissional de Vinícius Alves" loading="lazy" width="400" height="400" />
         </div>
       </div>
     </section>
 
-    <section id="sobre" class="section section-alt">
-      <div class="container reveal">
-        <div class="section-heading">
-          <h2 class="section-title">Sobre mim</h2>
-          <p class="section-description">Estou em formação como desenvolvedor e analista de dados. Aprendo por meio de cursos, exercícios e projetos práticos, e busco oportunidades para aplicar meus conhecimentos com responsabilidade e qualidade.</p>
-        </div>
-
-        <div class="about-grid">
-          <div class="about-copy">
-            <p>Tenho interesse em desenvolvimento de software e análise de dados. A cada projeto, procuro consolidar o aprendizado em Python, SQL, Git e tecnologias web. Meu objetivo é encontrar minha primeira experiência profissional ou estágio e continuar evoluindo no universo da tecnologia.</p>
-            <p>Valorizo clareza, atenção aos detalhes e a busca por soluções que façam sentido para quem usa o software.</p>
-          </div>
-
-          <ul class="about-list">
-            <li class="about-item">
-              <h3>Formação</h3>
-              <p>Ensino Médio — conclusão prevista para 2026</p>
-            </li>
-            <li class="about-item">
-              <h3>Foco</h3>
-              <p>Python, SQL e desenvolvimento web com JavaScript/TypeScript</p>
-            </li>
-            <li class="about-item">
-              <h3>Objetivo</h3>
-              <p>Estágio ou primeira oportunidade em tecnologia</p>
-            </li>
-            <li class="about-item">
-              <h3>Localização</h3>
-              <p>Brasil</p>
-            </li>
+    <section id="sobre" class="section">
+      <div class="container">
+        <h2 class="section-title">Sobre mim</h2>
+        <div class="about-content">
+          <p>Sou estudante do 3º ano do Ensino Médio, com foco em desenvolvimento de software e análise de dados. Aprendo por meio de cursos, exercícios e projetos práticos, buscando oportunidades para aplicar meus conhecimentos com responsabilidade e qualidade.</p>
+          <p>Tenho interesse em desenvolvimento de software e análise de dados. A cada projeto, procuro consolidar o aprendizado em Python, SQL, Git e tecnologias web. Meu objetivo é encontrar minha primeira experiência profissional ou estágio e continuar evoluindo no universo da tecnologia.</p>
+          <ul class="about-info">
+            <li><strong>Formação:</strong> 3º ano do Ensino Médio — conclusão prevista para 2026</li>
+            <li><strong>Localização:</strong> Brasil</li>
+            <li><strong>Objetivo:</strong> Estágio ou primeira oportunidade em tecnologia</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section id="habilidades" class="section">
-      <div class="container reveal">
-        <div class="section-heading">
-          <h2 class="section-title">Habilidades</h2>
-          <p class="section-description">Habilidades organizadas por linguagens, ferramentas e conhecimentos. Incluo as tecnologias já aplicadas em projetos e as que sigo estudando.</p>
-        </div>
-
-        <div class="cards-grid grid-3">
-          <div class="card skill-card">
-            <h3>Linguagens</h3>
-            <div class="skill-list">
-              <li><strong>Python</strong><span class="skill-status">Utilizado em automação, análise de dados e projetos pessoais</span></li>
-              <li><strong>JavaScript</strong><span class="skill-status">Estudo e aplicação em interfaces web responsivas</span></li>
-              <li><strong>TypeScript</strong><span class="skill-status">Estudo de tipagem e padrões de código mais seguros</span></li>
-              <li><strong>SQL</strong><span class="skill-status">Manipulação e análise de dados em consultas estruturadas</span></li>
-              <li><strong>HTML</strong><span class="skill-status">Estrutura semântica e acessível de páginas</span></li>
-              <li><strong>CSS</strong><span class="skill-status">Estilos modernos e responsivos</span></li>
-            </div>
-          </div>
-
-          <div class="card skill-card">
-            <h3>Ferramentas</h3>
-            <div class="skill-list">
-              <li><strong>Git</strong><span class="skill-status">Controle de versão e fluxos de commits</span></li>
-              <li><strong>GitHub</strong><span class="skill-status">Repositórios, documentação e publicação</span></li>
-              <li><strong>Visual Studio Code</strong><span class="skill-status">Ambiente de desenvolvimento configurado</span></li>
-            </div>
-          </div>
-
-          <div class="card skill-card">
-            <h3>Conhecimentos</h3>
-            <div class="skill-list">
-              <li><strong>Lógica de programação</strong><span class="skill-status">Resolução estruturada de problemas</span></li>
-              <li><strong>POO</strong><span class="skill-status">Organização de código em objetos</span></li>
-              <li><strong>Manipulação de dados</strong><span class="skill-status">Análise e transformação de informações</span></li>
-              <li><strong>Automação de tarefas</strong><span class="skill-status">Scripting em Python para processos repetitivos</span></li>
-              <li><strong>Desenvolvimento de interfaces</strong><span class="skill-status">Layout responsivo e acessível</span></li>
-              <li><strong>Controle de versão</strong><span class="skill-status">Histórico e colaboração segura</span></li>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="formacao" class="section section-alt">
-      <div class="container reveal">
-        <div class="section-heading">
-          <h2 class="section-title">Formação e jornada</h2>
-          <p class="section-description">Linha do tempo com as principais etapas do meu aprendizado em tecnologia, sem apresentar estudos como experiência profissional.</p>
-        </div>
-
-        <div class="timeline-grid">
-          <article class="timeline-item reveal">
-            <span>Ensino Médio</span>
-            <h3>Conclusão prevista 2026</h3>
-            <p>Cursando o 3º ano do Ensino Médio com dedicação paralela a estudos em tecnologia.</p>
-          </article>
-
-          <article class="timeline-item reveal">
-            <span>Python e lógica</span>
-            <h3>Estudos em programação</h3>
-            <p>Aprendizado de lógica, estruturas de controle, funções e organização de código em Python.</p>
-          </article>
-
-          <article class="timeline-item reveal">
-            <span>SQL e dados</span>
-            <h3>Análise de dados</h3>
-            <p>Estudo de consultas SQL para extrair resultados, relatórios e respostas a perguntas de negócios.</p>
-          </article>
-
-          <article class="timeline-item reveal">
-            <span>JavaScript e TypeScript</span>
-            <h3>Desenvolvimento web</h3>
-            <p>Aprendizado de interfaces, DOM, validações e estruturas mais seguras com TypeScript.</p>
-          </article>
-
-          <article class="timeline-item reveal">
-            <span>Projetos pessoais</span>
-            <h3>Aplicação prática</h3>
-            <p>Construção de jogos, ferramentas e automações para consolidar o aprendizado.</p>
-          </article>
-
-          <article class="timeline-item reveal">
-            <span>Git e GitHub</span>
-            <h3>Versionamento</h3>
-            <p>Uso de git para histórico, branches e publicação de código no GitHub.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="projetos" class="section">
-      <div class="container reveal">
-        <div class="section-heading">
-          <h2 class="section-title">Projetos</h2>
-          <p class="section-description">Projetos reais desenvolvidos durante meus estudos em Python, SQL e automação, com foco em resultados e código organizado.</p>
-        </div>
-
-        <div class="project-filter-group">
-          <button class="project-filter active" data-filter="all" type="button">Todos</button>
-          <button class="project-filter" data-filter="python" type="button">Python</button>
-          <button class="project-filter" data-filter="sql" type="button">SQL</button>
-          <button class="project-filter" data-filter="web" type="button">Web</button>
-        </div>
-
-        <div class="projects-section">
-          <article class="project-card featured reveal" data-category="python">
-            <img src="assets/images/automacao.png" alt="Automação de relatório de vendas" loading="lazy" width="1200" height="675" />
-            <div class="project-card-content">
-              <h3>Automação de Relatório de Vendas com Python</h3>
-              <p>Projeto em Python que automatiza a análise de dados de vendas, gerando relatórios técnicos a partir de planilhas CSV com cálculos e indicadores relevantes.</p>
-              <div class="project-meta">
-                <span class="project-badge">Python</span>
-                <span class="project-badge">Automação</span>
-              </div>
-              <div class="project-actions">
-                <a class="btn btn-secondary" href="https://github.com/Vinicius1-dev/Projeto-automa-o-vendas-com-Python" target="_blank" rel="noopener noreferrer">Ver código</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal" data-category="python">
-            <img src="assets/images/cobrinha.png" alt="Jogo da cobrinha em Python" loading="lazy" width="1200" height="675" />
-            <div class="project-card-content">
+    <section id="projetos" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Projetos</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <img src="assets/images/cobrinha.png" alt="Jogo da cobrinha em Python" loading="lazy" width="600" height="340" />
+            <div class="project-content">
               <h3>Jogo da Cobrinha</h3>
-              <p>Jogo desenvolvido em Python com foco em controle de eventos, regras de jogo e organização do código em funções para manter a estrutura clara e escalável.</p>
-              <div class="project-meta">
-                <span class="project-badge">Python</span>
-                <span class="project-badge">Lógica</span>
+              <p>Jogo desenvolvido em Python com foco em controle de eventos, regras de jogo e organização do código.</p>
+              <div class="project-tags">
+                <span>Python</span>
               </div>
-              <div class="project-actions">
-                <a class="btn btn-secondary" href="https://github.com/Vinicius1-dev/cobra" target="_blank" rel="noopener noreferrer">Ver código</a>
-              </div>
+              <a class="btn btn-small" href="https://github.com/Vinicius1-dev/cobra" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
             </div>
           </article>
 
-          <article class="project-card reveal" data-category="python">
-            <img src="assets/images/calculadora.png" alt="Calculadora em Python" loading="lazy" width="1200" height="675" />
-            <div class="project-card-content">
-              <h3>Calculadora em Python</h3>
-              <p>Aplicação desenvolvida em Python para executar operações matemáticas básicas, com validação de entradas e foco em código organizado e legível.</p>
-              <div class="project-meta">
-                <span class="project-badge">Python</span>
-                <span class="project-badge">Lógica</span>
+          <article class="project-card">
+            <img src="assets/images/calculadora.png" alt="Calculadora em Python" loading="lazy" width="600" height="340" />
+            <div class="project-content">
+              <h3>Calculadora</h3>
+              <p>Aplicação desenvolvida em Python para executar operações matemáticas básicas com validação de entradas.</p>
+              <div class="project-tags">
+                <span>Python</span>
               </div>
-              <div class="project-actions">
-                <a class="btn btn-secondary" href="https://github.com/Vinicius1-dev/-calculadora-python/tree/main" target="_blank" rel="noopener noreferrer">Ver código</a>
-              </div>
+              <a class="btn btn-small" href="https://github.com/Vinicius1-dev/-calculadora-python/tree/main" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
             </div>
           </article>
 
-          <article class="project-card reveal" data-category="sql">
-            <img src="assets/images/sql.png" alt="Análise de vendas com SQL" loading="lazy" width="1200" height="675" />
-            <div class="project-card-content">
+          <article class="project-card">
+            <img src="assets/images/sql.png" alt="Análise de vendas com SQL" loading="lazy" width="600" height="340" />
+            <div class="project-content">
               <h3>Análise de Vendas com SQL</h3>
-              <p>Projeto de análise de vendas que utiliza consultas SQL para extrair KPIs como faturamento total, produtos mais vendidos e comportamento de clientes.</p>
-              <div class="project-meta">
-                <span class="project-badge">SQL</span>
-                <span class="project-badge">Dados</span>
+              <p>Projeto de análise de vendas que utiliza consultas SQL para extrair KPIs e comportamento de clientes.</p>
+              <div class="project-tags">
+                <span>SQL</span>
               </div>
-              <div class="project-actions">
-                <a class="btn btn-secondary" href="https://github.com/Vinicius1-dev/analise-vendas-sql" target="_blank" rel="noopener noreferrer">Ver código</a>
+              <a class="btn btn-small" href="https://github.com/Vinicius1-dev/analise-vendas-sql" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/images/automacao.png" alt="Automação de relatório de vendas" loading="lazy" width="600" height="340" />
+            <div class="project-content">
+              <h3>Automação de Relatório de Vendas</h3>
+              <p>Projeto em Python que automatiza a análise de dados de vendas, gerando relatórios a partir de planilhas CSV.</p>
+              <div class="project-tags">
+                <span>Python</span>
               </div>
+              <a class="btn btn-small" href="https://github.com/Vinicius1-dev/Projeto-automa-o-vendas-com-Python" target="_blank" rel="noopener noreferrer">Ver no GitHub</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="certificados" class="section section-alt">
-      <div class="container reveal">
-        <div class="section-heading">
-          <h2 class="section-title">Certificados</h2>
-          <p class="section-description">Cursos e certificações que comprovam os conhecimentos que estudo em Python, SQL e desenvolvimento.</p>
-        </div>
-
-        <div class="certificate-grid">
-          <article class="certificate-card reveal">
-            <h3>SQL — Structured Query Language</h3>
-            <p>FGV Online</p>
-            <p class="certificate-note">Curso focado em organização e consulta de bases de dados com SQL.</p>
-          </article>
-          <article class="certificate-card reveal">
-            <h3>Crash Course on Python</h3>
-            <p>Google/Coursera</p>
-            <p class="certificate-note">Introdução à linguagem Python com exercícios práticos.</p>
-          </article>
-          <article class="certificate-card reveal">
-            <h3>Python for Data Science, AI & Development</h3>
-            <p>IBM/Coursera</p>
-            <p class="certificate-note">Fundamentos de Python aplicados a dados e desenvolvimento.</p>
-          </article>
-          <article class="certificate-card reveal">
-            <h3>Projetos em Python</h3>
-            <p>Fundação Bradesco</p>
-            <p class="certificate-note">Construção de aplicações e automações em Python.</p>
-          </article>
-          <article class="certificate-card reveal">
-            <h3>Programação Orientada a Objetos com Python</h3>
-            <p>Curso online</p>
-            <p class="certificate-note">Estudo de classes, objetos e design orientado a objetos.</p>
-          </article>
-          <article class="certificate-card reveal">
-            <h3>Interface Gráfica com Python</h3>
-            <p>Curso online</p>
-            <p class="certificate-note">Criação de interfaces básicas em Python para usabilidade.</p>
-          </article>
+    <section id="formacao" class="section">
+      <div class="container">
+        <h2 class="section-title">Formação e Tecnologias</h2>
+        <div class="formation-grid">
+          <div class="formation-column">
+            <h3>Formação</h3>
+            <p>3º ano do Ensino Médio — conclusão prevista para 2026</p>
+            <p>Cursos de Python, SQL e desenvolvimento web</p>
+          </div>
+          <div class="formation-column">
+            <h3>Tecnologias</h3>
+            <ul class="tech-list">
+              <li>Python</li>
+              <li>SQL</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>Git</li>
+              <li>GitHub</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="contato" class="section">
-      <div class="container reveal">
-        <div class="section-heading">
-          <h2 class="section-title">Contato</h2>
-          <p class="section-description">Vamos conversar? Estou disponível para oportunidades de estágio, aprendizado e desenvolvimento de projetos em tecnologia.</p>
-        </div>
-
-        <div class="contact-grid">
-          <a class="contact-card reveal" href="mailto:viniciuscleberalves@gmail.com">
+    <section id="contato" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Contato</h2>
+        <p class="contact-intro">Vamos conversar? Estou disponível para oportunidades de estágio e aprendizado.</p>
+        <div class="contact-info">
+          <div class="contact-item">
             <h3>E-mail</h3>
             <p>viniciuscleberalves@gmail.com</p>
-          </a>
-          <a class="contact-card reveal" href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener noreferrer">
+          </div>
+          <div class="contact-item">
             <h3>GitHub</h3>
-            <p>github.com/Vinicius1-dev</p>
-          </a>
-          <a class="contact-card reveal" href="https://linkedin.com/in/vinicius-alves-silva-b666b6364" target="_blank" rel="noopener noreferrer">
+            <p><a href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener noreferrer">github.com/Vinicius1-dev</a></p>
+          </div>
+          <div class="contact-item">
             <h3>LinkedIn</h3>
-            <p>linkedin.com/in/vinicius-alves-silva</p>
-          </a>
+            <p><a href="https://linkedin.com/in/vinicius-alves-silva-b666b6364" target="_blank" rel="noopener noreferrer">linkedin.com/in/vinicius-alves-silva</a></p>
+          </div>
         </div>
-
-        <div class="copy-group reveal">
-          <button id="copyEmail" class="btn btn-primary" type="button" data-email="viniciuscleberalves@gmail.com">Copiar e-mail</button>
-          <p id="copyFeedback" class="copy-feedback" aria-live="polite"></p>
+        <div class="contact-action">
+          <a class="btn btn-primary" href="mailto:viniciuscleberalves@gmail.com">Enviar e-mail</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner reveal">
-      <p>© <span id="year"></span> Vinícius Alves &ndash; Desenvolvido por mim</p>
-      <nav class="footer-nav" aria-label="Redes sociais">
-        <a href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener noreferrer">GitHub</a>
-        <a href="https://linkedin.com/in/vinicius-alves-silva-b666b6364" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="#inicio">Voltar ao topo</a>
-      </nav>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Vinícius Alves</p>
     </div>
   </footer>
 
