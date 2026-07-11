@@ -1296,19 +1296,19 @@ const translations = {
 
 const languageSettings = {
   "pt-BR": {
-    flag: "🇧🇷",
+    flagClass: "flag-br",
     code: "PT",
     htmlLang: "pt-BR"
   },
 
   en: {
-    flag: "🇺🇸",
+    flagClass: "flag-us",
     code: "EN",
     htmlLang: "en"
   },
 
   es: {
-    flag: "🇪🇸",
+    flagClass: "flag-es",
     code: "ES",
     htmlLang: "es"
   }
@@ -1438,8 +1438,15 @@ function applyLanguage(language) {
     });
 
   if (languageCurrentFlag) {
-    languageCurrentFlag.textContent =
-      settings.flag;
+    languageCurrentFlag.classList.remove(
+      "flag-br",
+      "flag-us",
+      "flag-es"
+    );
+
+    languageCurrentFlag.classList.add(
+      settings.flagClass
+    );
   }
 
   if (languageCurrentCode) {
