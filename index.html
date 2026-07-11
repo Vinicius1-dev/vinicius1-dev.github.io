@@ -20,28 +20,99 @@
     <span style="--i: 6"></span>
     <span style="--i: 7"></span>
   </div>
-  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+  <a href="#main-content" class="skip-link" data-i18n="accessibility.skipToContent">Pular para o conteúdo</a>
 
   <header class="header">
     <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+      <a
+        class="brand"
+        href="#inicio"
+        aria-label="Voltar ao início"
+        data-i18n-aria-label="accessibility.backHome"
+      >
         <span class="brand-mark">VA</span>
         <span>Vinícius Alves</span>
       </a>
 
-      <button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-actions">
+        <nav
+          class="nav"
+          id="nav"
+          aria-label="Navegação principal"
+          data-i18n-aria-label="accessibility.mainNavigation"
+        >
+          <a class="active" href="#inicio" data-i18n="nav.home">Início</a>
+          <a href="#sobre" data-i18n="nav.about">Sobre</a>
+          <a href="#projetos" data-i18n="nav.projects">Projetos</a>
+          <a href="#habilidades" data-i18n="nav.skills">Competências</a>
+          <a href="#jornada" data-i18n="nav.journey">Jornada</a>
+          <a href="#contato" data-i18n="nav.contact">Contato</a>
+        </nav>
 
-      <nav class="nav" id="nav" aria-label="Navegação principal">
-        <a class="active" href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#habilidades">Competências</a>
-        <a href="#jornada">Jornada</a>
-        <a href="#contato">Contato</a>
-      </nav>
+        <div class="language-switcher" id="language-switcher">
+          <button
+            class="language-button"
+            id="language-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="language-menu"
+            aria-label="Selecionar idioma"
+            data-i18n-aria-label="language.select"
+          >
+            <span class="language-current-flag" id="language-current-flag" aria-hidden="true">🇧🇷</span>
+            <span class="language-current-code" id="language-current-code">PT</span>
+            <span class="language-chevron" aria-hidden="true">▾</span>
+          </button>
+
+          <div
+            class="language-menu"
+            id="language-menu"
+            role="menu"
+            aria-label="Idiomas disponíveis"
+            data-i18n-aria-label="language.available"
+          >
+            <button class="language-option active" type="button" role="menuitemradio" aria-checked="true" data-language="pt-BR">
+              <span class="language-flag" aria-hidden="true">🇧🇷</span>
+              <span class="language-option-text">
+                <strong>Português</strong>
+                <small>Brasil</small>
+              </span>
+              <span class="language-check" aria-hidden="true">✓</span>
+            </button>
+
+            <button class="language-option" type="button" role="menuitemradio" aria-checked="false" data-language="en">
+              <span class="language-flag" aria-hidden="true">🇺🇸</span>
+              <span class="language-option-text">
+                <strong>English</strong>
+                <small>United States</small>
+              </span>
+              <span class="language-check" aria-hidden="true">✓</span>
+            </button>
+
+            <button class="language-option" type="button" role="menuitemradio" aria-checked="false" data-language="es">
+              <span class="language-flag" aria-hidden="true">🇪🇸</span>
+              <span class="language-option-text">
+                <strong>Español</strong>
+                <small>España</small>
+              </span>
+              <span class="language-check" aria-hidden="true">✓</span>
+            </button>
+          </div>
+        </div>
+
+        <button
+          class="menu"
+          id="menu"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="nav"
+          data-i18n-aria-label="accessibility.openMenu"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -58,46 +129,46 @@
 
       <div class="container hero-grid">
         <div class="hero-content reveal">
-          <p class="eyebrow">Portfólio profissional</p>
-          <h1>Transformo estudos em projetos de <span>Python, dados e automação.</span></h1>
-          <p class="role">
+          <p class="eyebrow" data-i18n="hero.kicker">Portfólio profissional</p>
+          <h1 data-i18n-html="hero.title">Transformo estudos em projetos de <span>Python, dados e automação.</span></h1>
+          <p class="role" data-i18n="hero.description">
             Sou Vinícius Alves, estudante em formação para atuar com desenvolvimento e análise de dados. Estou construindo uma base sólida com projetos práticos, documentação e evolução constante.
           </p>
 
-          <div class="hero-badges" aria-label="Principais áreas">
+          <div class="hero-badges" aria-label="Principais áreas" data-i18n-aria-label="hero.mainAreas">
             <span>Python</span>
             <span>SQL</span>
-            <span>Automação</span>
-            <span>Dados</span>
+            <span data-i18n="hero.badge.automation">Automação</span>
+            <span data-i18n="hero.badge.data">Dados</span>
           </div>
 
           <div class="hero-actions">
-            <a class="btn primary magnetic" href="#projetos">Ver projetos</a>
-            <a class="btn secondary magnetic" href="mailto:viniciuscleberalves@gmail.com">Falar comigo</a>
+            <a class="btn primary magnetic" href="#projetos" data-i18n="hero.projectsButton">Ver projetos</a>
+            <a class="btn secondary magnetic" href="mailto:viniciuscleberalves@gmail.com" data-i18n="hero.contactButton">Falar comigo</a>
           </div>
 
-          <div class="hero-links" aria-label="Links profissionais">
+          <div class="hero-links" aria-label="Links profissionais" data-i18n-aria-label="hero.professionalLinks">
             <a href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener">GitHub</a>
             <a href="https://linkedin.com/in/vinicius-alves-silva-b666b6364" target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
 
-        <aside class="profile-stage reveal" aria-label="Resumo profissional">
+        <aside class="profile-stage reveal" aria-label="Resumo profissional" data-i18n-aria-label="hero.professionalSummary">
           <div class="photo-frame tilt-card">
-            <img src="vinicius.jpg" alt="Foto profissional de Vinícius Alves">
+            <img src="vinicius.jpg" alt="Foto profissional de Vinícius Alves" data-i18n-alt="hero.photoAlt">
             <div class="photo-caption">
-              <span>Disponível para estágio</span>
-              <strong>Python & Dados</strong>
+              <span data-i18n="hero.available">Disponível para estágio</span>
+              <strong data-i18n="hero.pythonData">Python & Dados</strong>
             </div>
           </div>
 
-          <div class="terminal-card" aria-label="Resumo técnico">
+          <div class="terminal-card" aria-label="Resumo técnico" data-i18n-aria-label="hero.technicalSummary">
             <div class="terminal-top">
               <span></span>
               <span></span>
               <span></span>
             </div>
-            <pre><code>perfil = {
+            <pre><code data-i18n-html="hero.terminal.code">perfil = {
   "foco": "Python + SQL",
   "interesse": "Dados e automação",
   "meta": "Primeira oportunidade"
@@ -109,19 +180,19 @@
       <div class="container metrics-grid reveal">
         <article>
           <strong data-count="4">0</strong>
-          <span>projetos publicados</span>
+          <span data-i18n="hero.metric.projects">projetos publicados</span>
         </article>
         <article>
           <strong>Python</strong>
-          <span>scripts, lógica e automação</span>
+          <span data-i18n="hero.metric.python">scripts, lógica e automação</span>
         </article>
         <article>
           <strong>SQL</strong>
-          <span>consultas e análise de vendas</span>
+          <span data-i18n="hero.metric.sql">consultas e análise de vendas</span>
         </article>
         <article>
           <strong>2026</strong>
-          <span>conclusão do Ensino Médio</span>
+          <span data-i18n="hero.metric.graduation">conclusão do Ensino Médio</span>
         </article>
       </div>
 
@@ -130,14 +201,14 @@
           <span>Python</span>
           <span>SQL</span>
           <span>GitHub</span>
-          <span>Automação</span>
-          <span>Dados</span>
+          <span data-i18n="hero.marquee.automation">Automação</span>
+          <span data-i18n="hero.marquee.data">Dados</span>
           <span>JavaScript</span>
           <span>Python</span>
           <span>SQL</span>
           <span>GitHub</span>
-          <span>Automação</span>
-          <span>Dados</span>
+          <span data-i18n="hero.marquee.automation">Automação</span>
+          <span data-i18n="hero.marquee.data">Dados</span>
           <span>JavaScript</span>
         </div>
       </div>
@@ -146,25 +217,24 @@
     <section id="sobre" class="about-pro">
       <div class="about-pro-orb about-pro-orb-one" aria-hidden="true"></div>
       <div class="about-pro-orb about-pro-orb-two" aria-hidden="true"></div>
-      <span class="about-pro-word" aria-hidden="true">SOBRE</span>
+      <span class="about-pro-word" aria-hidden="true" data-i18n="about.watermark">SOBRE</span>
 
       <div class="container">
         <div class="about-pro-heading reveal">
           <div>
             <p class="about-pro-kicker">
               <span>02</span>
-              Sobre mim
+              <span data-i18n="about.kicker">Sobre mim</span>
             </p>
 
-            <h2>
+            <h2 data-i18n-html="about.title">
               Aprendo construindo,
               <span>testando e evoluindo.</span>
             </h2>
           </div>
 
-          <p>
-            Estou construindo minha entrada na área de tecnologia por meio de
-            estudos, projetos práticos e evolução constante.
+          <p data-i18n="about.subtitle">
+            Estou construindo minha entrada na área de tecnologia por meio de estudos, projetos práticos e evolução constante.
           </p>
         </div>
 
@@ -172,46 +242,41 @@
           <article class="about-story reveal">
             <span class="about-story-number">01</span>
 
-            <div class="about-story-label">
+            <div class="about-story-label" data-i18n="about.storyLabel">
               Minha história
             </div>
 
-            <blockquote>
-              "Meu jeito de aprender é transformar teoria em algo que
-              realmente funciona."
+            <blockquote data-i18n="about.quote">
+              "Meu jeito de aprender é transformar teoria em algo que realmente funciona."
             </blockquote>
 
             <div class="about-story-copy">
-              <p>
-                Estou no 3º ano do Ensino Médio e venho direcionando meus
-                estudos para tecnologia, principalmente Python, SQL, Git,
-                GitHub e desenvolvimento web.
+              <p data-i18n="about.story.p1">
+                Estou no 3º ano do Ensino Médio e venho direcionando meus estudos para tecnologia, principalmente Python, SQL, Git, GitHub e desenvolvimento web.
               </p>
 
-              <p>
-                Busco minha primeira oportunidade ou estágio para aprender com
-                pessoas experientes, contribuir com tarefas reais e crescer
-                com consistência dentro de uma equipe.
+              <p data-i18n="about.story.p2">
+                Busco minha primeira oportunidade ou estágio para aprender com pessoas experientes, contribuir com tarefas reais e crescer com consistência dentro de uma equipe.
               </p>
             </div>
 
             <div class="about-principles">
               <div>
                 <span>01</span>
-                <strong>Aprender</strong>
-                <p>Estudar fundamentos com organização.</p>
+                <strong data-i18n="about.principle.learn.title">Aprender</strong>
+                <p data-i18n="about.principle.learn.desc">Estudar fundamentos com organização.</p>
               </div>
 
               <div>
                 <span>02</span>
-                <strong>Construir</strong>
-                <p>Transformar conhecimento em projetos.</p>
+                <strong data-i18n="about.principle.build.title">Construir</strong>
+                <p data-i18n="about.principle.build.desc">Transformar conhecimento em projetos.</p>
               </div>
 
               <div>
                 <span>03</span>
-                <strong>Evoluir</strong>
-                <p>Revisar, melhorar e documentar.</p>
+                <strong data-i18n="about.principle.evolve.title">Evoluir</strong>
+                <p data-i18n="about.principle.evolve.desc">Revisar, melhorar e documentar.</p>
               </div>
             </div>
           </article>
@@ -225,35 +290,22 @@
                   <span></span>
                 </div>
 
-                <span>perfil_atual.py</span>
+                <span data-i18n="about.focus.filename">perfil_atual.py</span>
               </div>
 
               <div class="about-focus-content">
-                <span class="about-focus-label">Foco atual</span>
+                <span class="about-focus-label" data-i18n="about.focus.label">Foco atual</span>
 
-                <h3>Python, dados e automação</h3>
+                <h3 data-i18n="about.focus.title">Python, dados e automação</h3>
 
-                <p>
-                  Desenvolvendo uma base técnica para criar soluções,
-                  trabalhar com informações e resolver problemas utilizando
-                  programação.
+                <p data-i18n="about.focus.desc">
+                  Desenvolvendo uma base técnica para criar soluções, trabalhar com informações e resolver problemas utilizando programação.
                 </p>
 
                 <div class="about-code">
-                  <span>
-                    <i>foco</i>
-                    = "Python + SQL"
-                  </span>
-
-                  <span>
-                    <i>objetivo</i>
-                    = "Primeira oportunidade"
-                  </span>
-
-                  <span>
-                    <i>perfil</i>
-                    = "Aprendizado prático"
-                  </span>
+                  <span data-i18n-html="about.focus.code.foco"><i>foco</i> = "Python + SQL"</span>
+                  <span data-i18n-html="about.focus.code.objective"><i>objetivo</i> = "Primeira oportunidade"</span>
+                  <span data-i18n-html="about.focus.code.profile"><i>perfil</i> = "Aprendizado prático"</span>
                 </div>
 
                 <div class="about-focus-progress">
@@ -265,23 +317,23 @@
             <div class="about-info-grid">
               <article class="about-info-card reveal">
                 <span class="about-info-number">01</span>
-                <span class="about-info-label">Formação</span>
-                <strong>Ensino Médio</strong>
-                <p>Conclusão prevista para 2026.</p>
+                <span class="about-info-label" data-i18n="about.info.education.label">Formação</span>
+                <strong data-i18n="about.info.education.title">Ensino Médio</strong>
+                <p data-i18n="about.info.education.desc">Conclusão prevista para 2026.</p>
               </article>
 
               <article class="about-info-card reveal">
                 <span class="about-info-number">02</span>
-                <span class="about-info-label">Objetivo</span>
-                <strong>Primeira oportunidade</strong>
-                <p>Estágio ou vaga júnior em tecnologia.</p>
+                <span class="about-info-label" data-i18n="about.info.goal.label">Objetivo</span>
+                <strong data-i18n="about.info.goal.title">Primeira oportunidade</strong>
+                <p data-i18n="about.info.goal.desc">Estágio ou vaga júnior em tecnologia.</p>
               </article>
 
               <article class="about-info-card reveal">
                 <span class="about-info-number">03</span>
-                <span class="about-info-label">Diferencial</span>
-                <strong>Aprendizado prático</strong>
-                <p>Projetos, organização e evolução contínua.</p>
+                <span class="about-info-label" data-i18n="about.info.diff.label">Diferencial</span>
+                <strong data-i18n="about.info.diff.title">Aprendizado prático</strong>
+                <p data-i18n="about.info.diff.desc">Projetos, organização e evolução contínua.</p>
               </article>
             </div>
           </div>
@@ -300,39 +352,39 @@
       <div class="container">
         <div class="projects-showcase reveal">
           <div class="projects-copy">
-            <p class="section-kicker">Projetos</p>
-            <h2 class="section-title">Projetos que mostram <span>evolução em código</span>, dados e entrega.</h2>
-            <p>
+            <p class="section-kicker" data-i18n="projects.kicker">Projetos</p>
+            <h2 class="section-title" data-i18n-html="projects.title">Projetos que mostram <span>evolução em código</span>, dados e entrega.</h2>
+            <p data-i18n="projects.desc">
               Essa área agora funciona como uma vitrine técnica: cada projeto destaca o problema resolvido, a tecnologia usada e o tipo de habilidade que ele prova para quem está avaliando seu perfil.
             </p>
 
             <div class="project-proof">
               <article>
                 <strong>01</strong>
-                <span>Lógica aplicada</span>
+                <span data-i18n="projects.proof.logic">Lógica aplicada</span>
               </article>
               <article>
                 <strong>02</strong>
-                <span>Dados e consultas</span>
+                <span data-i18n="projects.proof.data">Dados e consultas</span>
               </article>
               <article>
                 <strong>03</strong>
-                <span>Automação prática</span>
+                <span data-i18n="projects.proof.automation">Automação prática</span>
               </article>
             </div>
           </div>
 
-          <aside class="project-console tilt-card" aria-label="Resumo animado dos projetos">
+          <aside class="project-console tilt-card" aria-label="Resumo animado dos projetos" data-i18n-aria-label="projects.console.label">
             <div class="terminal-top">
               <span></span>
               <span></span>
               <span></span>
             </div>
             <div class="console-stream">
-              <span>vinicius@portfolio:~$ analisando_projetos</span>
-              <span class="success">✓ Python: automação e lógica</span>
-              <span class="success">✓ SQL: consultas e insights</span>
-              <span class="success">✓ GitHub: repositórios publicados</span>
+              <span data-i18n="projects.console.cmd">vinicius@portfolio:~$ analisando_projetos</span>
+              <span class="success" data-i18n="projects.console.python">✓ Python: automação e lógica</span>
+              <span class="success" data-i18n="projects.console.sql">✓ SQL: consultas e insights</span>
+              <span class="success" data-i18n="projects.console.github">✓ GitHub: repositórios publicados</span>
             </div>
             <div class="console-meter">
               <i></i>
@@ -340,27 +392,27 @@
           </aside>
         </div>
 
-        <div class="project-tabs reveal" aria-label="Filtrar projetos">
-          <button class="active" type="button" data-filter="todos">Todos</button>
+        <div class="project-tabs reveal" aria-label="Filtrar projetos" data-i18n-aria-label="projects.filter.label">
+          <button class="active" type="button" data-filter="todos" data-i18n="projects.filter.all">Todos</button>
           <button type="button" data-filter="python">Python</button>
           <button type="button" data-filter="sql">SQL</button>
-          <button type="button" data-filter="automacao">Automação</button>
-          <button type="button" data-filter="logica">Lógica</button>
+          <button type="button" data-filter="automacao" data-i18n="projects.filter.automation">Automação</button>
+          <button type="button" data-filter="logica" data-i18n="projects.filter.logic">Lógica</button>
         </div>
 
         <div class="projects-grid">
           <article class="project-card reveal tilt-card" data-project="python automacao">
             <a class="project-image" href="https://github.com/Vinicius1-dev/Projeto-automa-o-vendas-com-Python" target="_blank" rel="noopener">
-              <img src="assets/images/automacao.png" alt="Tela do projeto de automação de relatório de vendas">
+              <img src="assets/images/automacao.png" alt="Tela do projeto de automação de relatório de vendas" data-i18n-alt="projects.p1.imageAlt">
             </a>
             <div class="project-body">
               <div class="project-head">
                 <span class="project-index">01</span>
-                <span class="project-status">Projeto principal</span>
+                <span class="project-status" data-i18n="projects.p1.status">Projeto principal</span>
               </div>
-              <span class="project-type">Automação</span>
-              <h3>Automação de Relatório de Vendas</h3>
-              <p>
+              <span class="project-type" data-i18n="projects.p1.type">Automação</span>
+              <h3 data-i18n="projects.p1.title">Automação de Relatório de Vendas</h3>
+              <p data-i18n="projects.p1.desc">
                 Script em Python que lê dados de vendas, calcula indicadores e organiza resultados em relatório. Mostra lógica, manipulação de arquivos e foco em produtividade.
               </p>
               <div class="project-progress" aria-hidden="true">
@@ -369,24 +421,24 @@
               <div class="tags">
                 <span>Python</span>
                 <span>CSV</span>
-                <span>Relatórios</span>
+                <span data-i18n="projects.p1.tag.reports">Relatórios</span>
               </div>
-              <a class="project-link" href="https://github.com/Vinicius1-dev/Projeto-automa-o-vendas-com-Python" target="_blank" rel="noopener">Ver no GitHub</a>
+              <a class="project-link" href="https://github.com/Vinicius1-dev/Projeto-automa-o-vendas-com-Python" target="_blank" rel="noopener" data-i18n="projects.link.github">Ver no GitHub</a>
             </div>
           </article>
 
           <article class="project-card reveal tilt-card" data-project="sql dados">
             <a class="project-image" href="https://github.com/Vinicius1-dev/analise-vendas-sql" target="_blank" rel="noopener">
-              <img src="assets/images/sql.png" alt="Tela do projeto de análise de vendas com SQL">
+              <img src="assets/images/sql.png" alt="Tela do projeto de análise de vendas com SQL" data-i18n-alt="projects.p2.imageAlt">
             </a>
             <div class="project-body">
               <div class="project-head">
                 <span class="project-index">02</span>
-                <span class="project-status">Dados</span>
+                <span class="project-status" data-i18n="projects.p2.status">Dados</span>
               </div>
-              <span class="project-type">Dados</span>
-              <h3>Análise de Vendas com SQL</h3>
-              <p>
+              <span class="project-type" data-i18n="projects.p2.type">Dados</span>
+              <h3 data-i18n="projects.p2.title">Análise de Vendas com SQL</h3>
+              <p data-i18n="projects.p2.desc">
                 Consultas SQL para investigar faturamento, produtos mais vendidos e comportamento de clientes.
               </p>
               <div class="project-progress" aria-hidden="true">
@@ -394,25 +446,25 @@
               </div>
               <div class="tags">
                 <span>SQL</span>
-                <span>Análise</span>
-                <span>Insights</span>
+                <span data-i18n="projects.p2.tag.analysis">Análise</span>
+                <span data-i18n="projects.p2.tag.insights">Insights</span>
               </div>
-              <a class="project-link" href="https://github.com/Vinicius1-dev/analise-vendas-sql" target="_blank" rel="noopener">Ver no GitHub</a>
+              <a class="project-link" href="https://github.com/Vinicius1-dev/analise-vendas-sql" target="_blank" rel="noopener" data-i18n="projects.link.github">Ver no GitHub</a>
             </div>
           </article>
 
           <article class="project-card reveal tilt-card" data-project="python logica">
             <a class="project-image" href="https://github.com/Vinicius1-dev/cobra" target="_blank" rel="noopener">
-              <img src="assets/images/cobrinha.png" alt="Tela do jogo da cobrinha em Python">
+              <img src="assets/images/cobrinha.png" alt="Tela do jogo da cobrinha em Python" data-i18n-alt="projects.p3.imageAlt">
             </a>
             <div class="project-body">
               <div class="project-head">
                 <span class="project-index">03</span>
-                <span class="project-status">Lógica</span>
+                <span class="project-status" data-i18n="projects.p3.status">Lógica</span>
               </div>
-              <span class="project-type">Lógica</span>
-              <h3>Jogo da Cobrinha</h3>
-              <p>
+              <span class="project-type" data-i18n="projects.p3.type">Lógica</span>
+              <h3 data-i18n="projects.p3.title">Jogo da Cobrinha</h3>
+              <p data-i18n="projects.p3.desc">
                 Jogo em Python para praticar eventos, colisões, pontuação e organização de fluxo.
               </p>
               <div class="project-progress" aria-hidden="true">
@@ -420,25 +472,25 @@
               </div>
               <div class="tags">
                 <span>Python</span>
-                <span>Game loop</span>
-                <span>Lógica</span>
+                <span data-i18n="projects.p3.tag.gameloop">Game loop</span>
+                <span data-i18n="projects.p3.tag.logic">Lógica</span>
               </div>
-              <a class="project-link" href="https://github.com/Vinicius1-dev/cobra" target="_blank" rel="noopener">Ver no GitHub</a>
+              <a class="project-link" href="https://github.com/Vinicius1-dev/cobra" target="_blank" rel="noopener" data-i18n="projects.link.github">Ver no GitHub</a>
             </div>
           </article>
 
           <article class="project-card reveal tilt-card" data-project="python fundamentos">
             <a class="project-image" href="https://github.com/Vinicius1-dev/calculadora-python/tree/main" target="_blank" rel="noopener">
-              <img src="assets/images/calculadora.png" alt="Tela do projeto calculadora em Python">
+              <img src="assets/images/calculadora.png" alt="Tela do projeto calculadora em Python" data-i18n-alt="projects.p4.imageAlt">
             </a>
             <div class="project-body">
               <div class="project-head">
                 <span class="project-index">04</span>
-                <span class="project-status">Base</span>
+                <span class="project-status" data-i18n="projects.p4.status">Base</span>
               </div>
-              <span class="project-type">Fundamentos</span>
-              <h3>Calculadora</h3>
-              <p>
+              <span class="project-type" data-i18n="projects.p4.type">Fundamentos</span>
+              <h3 data-i18n="projects.p4.title">Calculadora</h3>
+              <p data-i18n="projects.p4.desc">
                 Aplicação criada para praticar funções, entrada de dados, operações matemáticas e validação básica.
               </p>
               <div class="project-progress" aria-hidden="true">
@@ -446,10 +498,10 @@
               </div>
               <div class="tags">
                 <span>Python</span>
-                <span>Funções</span>
-                <span>Operações</span>
+                <span data-i18n="projects.p4.tag.functions">Funções</span>
+                <span data-i18n="projects.p4.tag.operations">Operações</span>
               </div>
-              <a class="project-link" href="https://github.com/Vinicius1-dev/calculadora-python/tree/main" target="_blank" rel="noopener">Ver no GitHub</a>
+              <a class="project-link" href="https://github.com/Vinicius1-dev/calculadora-python/tree/main" target="_blank" rel="noopener" data-i18n="projects.link.github">Ver no GitHub</a>
             </div>
           </article>
         </div>
@@ -465,22 +517,21 @@
           <div>
             <span class="skills-pro-kicker">
               <span>01</span>
-              HABILIDADES
+              <span data-i18n="skills.kickerWord">HABILIDADES</span>
             </span>
 
-            <h2>
+            <h2 data-i18n-html="skills.title">
               Experiência
               <span>técnica</span>
             </h2>
           </div>
 
-          <p>
+          <p data-i18n="skills.subtitle">
             Tecnologias que estou estudando e aplicando em projetos pessoais.
           </p>
         </div>
 
         <div class="skills-pro-grid">
-
           <article class="skill-pro-card reveal-skill">
             <span class="skill-pro-number">01</span>
 
@@ -489,15 +540,10 @@
             </div>
 
             <div class="skill-pro-content">
-              <span class="skill-pro-category">
-                Linguagem
-              </span>
-
+              <span class="skill-pro-category" data-i18n="skills.category.language">Linguagem</span>
               <h3>Python</h3>
-
-              <p>
-                Lógica de programação, scripts de automação e introdução ao
-                desenvolvimento back-end com Python.
+              <p data-i18n="skills.python.desc">
+                Lógica de programação, scripts de automação e introdução ao desenvolvimento back-end com Python.
               </p>
             </div>
 
@@ -514,15 +560,10 @@
             </div>
 
             <div class="skill-pro-content">
-              <span class="skill-pro-category">
-                Linguagem
-              </span>
-
+              <span class="skill-pro-category" data-i18n="skills.category.language">Linguagem</span>
               <h3>TypeScript</h3>
-
-              <p>
-                Realizando curso de TypeScript, aprendendo tipagem estática e
-                boas práticas de desenvolvimento orientado a tipos.
+              <p data-i18n="skills.typescript.desc">
+                Realizando curso de TypeScript, aprendendo tipagem estática e boas práticas de desenvolvimento orientado a tipos.
               </p>
             </div>
 
@@ -539,15 +580,10 @@
             </div>
 
             <div class="skill-pro-content">
-              <span class="skill-pro-category skill-category-green">
-                Versionamento
-              </span>
-
+              <span class="skill-pro-category skill-category-green" data-i18n="skills.category.versioning">Versionamento</span>
               <h3>Git & GitHub</h3>
-
-              <p>
-                Controle de versão, criação de repositórios, commits e
-                versionamento de projetos com Git e GitHub.
+              <p data-i18n="skills.git.desc">
+                Controle de versão, criação de repositórios, commits e versionamento de projetos com Git e GitHub.
               </p>
             </div>
 
@@ -564,15 +600,10 @@
             </div>
 
             <div class="skill-pro-content">
-              <span class="skill-pro-category skill-category-green">
-                Fundamentos
-              </span>
-
-              <h3>Lógica de Programação</h3>
-
-              <p>
-                Estudo de algoritmos, estruturas de controle e resolução de
-                problemas com raciocínio lógico estruturado.
+              <span class="skill-pro-category skill-category-green" data-i18n="skills.category.fundamentals">Fundamentos</span>
+              <h3 data-i18n="skills.logic.title">Lógica de Programação</h3>
+              <p data-i18n="skills.logic.desc">
+                Estudo de algoritmos, estruturas de controle e resolução de problemas com raciocínio lógico estruturado.
               </p>
             </div>
 
@@ -580,7 +611,6 @@
               <span></span>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -594,24 +624,21 @@
           <div>
             <p class="journey-pro-kicker">
               <span>03</span>
-              Jornada
+              <span data-i18n="journey.kicker">Jornada</span>
             </p>
 
-            <h2>
+            <h2 data-i18n-html="journey.title">
               O caminho que estou
               <span>construindo.</span>
             </h2>
           </div>
 
-          <p class="journey-pro-intro">
-            Minha evolução acontece por etapas: primeiro construo projetos,
-            depois aprofundo meus conhecimentos e me preparo para transformar
-            aprendizado em experiência profissional.
+          <p class="journey-pro-intro" data-i18n="journey.intro">
+            Minha evolução acontece por etapas: primeiro construo projetos, depois aprofundo meus conhecimentos e me preparo para transformar aprendizado em experiência profissional.
           </p>
         </div>
 
         <div class="journey-roadmap reveal">
-
           <article class="journey-step journey-current">
             <div class="journey-marker">
               <span>01</span>
@@ -619,25 +646,18 @@
 
             <div class="journey-card tilt-card">
               <div class="journey-card-top">
-                <span class="journey-stage">Agora</span>
-
+                <span class="journey-stage" data-i18n="journey.step1.stage">Agora</span>
                 <span class="journey-status">
                   <i></i>
-                  Em andamento
+                  <span data-i18n="journey.step1.status">Em andamento</span>
                 </span>
               </div>
 
-              <div class="journey-icon">
-                &lt;/&gt;
-              </div>
-
+              <div class="journey-icon">&lt;/&gt;</div>
               <span class="journey-card-number">01</span>
-
-              <h3>Projetos práticos no GitHub</h3>
-
-              <p>
-                Organizando repositórios, melhorando descrições e criando
-                soluções com Python e SQL.
+              <h3 data-i18n="journey.step1.title">Projetos práticos no GitHub</h3>
+              <p data-i18n="journey.step1.desc">
+                Organizando repositórios, melhorando descrições e criando soluções com Python e SQL.
               </p>
 
               <div class="journey-tags">
@@ -659,29 +679,20 @@
 
             <div class="journey-card tilt-card">
               <div class="journey-card-top">
-                <span class="journey-stage">Estudos</span>
-
-                <span class="journey-label">
-                  Evolução contínua
-                </span>
+                <span class="journey-stage" data-i18n="journey.step2.stage">Estudos</span>
+                <span class="journey-label" data-i18n="journey.step2.label">Evolução contínua</span>
               </div>
 
-              <div class="journey-icon journey-icon-mint">
-                SQL
-              </div>
-
+              <div class="journey-icon journey-icon-mint">SQL</div>
               <span class="journey-card-number">02</span>
-
-              <h3>Python, dados e web</h3>
-
-              <p>
-                Consolidando lógica, consultas, estrutura de páginas e boas
-                práticas de versionamento.
+              <h3 data-i18n="journey.step2.title">Python, dados e web</h3>
+              <p data-i18n="journey.step2.desc">
+                Consolidando lógica, consultas, estrutura de páginas e boas práticas de versionamento.
               </p>
 
               <div class="journey-tags">
-                <span>Dados</span>
-                <span>Web</span>
+                <span data-i18n="journey.tag.data">Dados</span>
+                <span data-i18n="journey.tag.web">Web</span>
                 <span>Git</span>
               </div>
 
@@ -699,29 +710,20 @@
             <div class="journey-card journey-future tilt-card">
               <div class="journey-card-top">
                 <span class="journey-stage">2026</span>
-
-                <span class="journey-label">
-                  Próximo marco
-                </span>
+                <span class="journey-label" data-i18n="journey.step3.label">Próximo marco</span>
               </div>
 
-              <div class="journey-icon journey-icon-lime">
-                ✓
-              </div>
-
+              <div class="journey-icon journey-icon-lime">✓</div>
               <span class="journey-card-number">03</span>
-
-              <h3>Conclusão do Ensino Médio</h3>
-
-              <p>
-                Preparação para entrar no mercado como estagiário ou
-                profissional júnior em formação.
+              <h3 data-i18n="journey.step3.title">Conclusão do Ensino Médio</h3>
+              <p data-i18n="journey.step3.desc">
+                Preparação para entrar no mercado como estagiário ou profissional júnior em formação.
               </p>
 
               <div class="journey-tags">
-                <span>Estágio</span>
-                <span>Tecnologia</span>
-                <span>Carreira</span>
+                <span data-i18n="journey.tag.internship">Estágio</span>
+                <span data-i18n="journey.tag.tech">Tecnologia</span>
+                <span data-i18n="journey.tag.career">Carreira</span>
               </div>
 
               <div class="journey-card-line journey-line-lime">
@@ -729,24 +731,20 @@
               </div>
             </div>
           </article>
-
         </div>
 
         <div class="journey-message reveal">
-          <div class="journey-message-icon">
-            →
-          </div>
+          <div class="journey-message-icon">→</div>
 
           <div>
-            <span>Objetivo profissional</span>
-
-            <strong>
+            <span data-i18n="journey.message.label">Objetivo profissional</span>
+            <strong data-i18n="journey.message.text">
               Transformar conhecimento em contribuição real dentro de uma equipe.
             </strong>
           </div>
 
           <a href="#contato">
-            Vamos conversar
+            <span data-i18n="journey.message.cta">Vamos conversar</span>
             <span>↗</span>
           </a>
         </div>
@@ -757,63 +755,46 @@
       <div class="container">
         <div class="contact-form-card reveal">
           <div class="contact-form-intro">
-            <p class="section-kicker">Contato</p>
+            <p class="section-kicker" data-i18n="contact.kicker">Contato</p>
 
-            <h2 class="section-title">
+            <h2 class="section-title" data-i18n-html="contact.title">
               Vamos conversar sobre
               <span>uma oportunidade?</span>
             </h2>
 
-            <p class="contact-text">
-              Preencha o formulário e a mensagem será enviada diretamente
-              para o meu e-mail. Responderei utilizando o endereço informado.
+            <p class="contact-text" data-i18n="contact.text">
+              Preencha o formulário e a mensagem será enviada diretamente para o meu e-mail. Responderei utilizando o endereço informado.
             </p>
 
             <div class="contact-form-details">
               <article>
                 <span>01</span>
-
                 <div>
-                  <strong>Envie sua mensagem</strong>
-                  <p>Informe os detalhes da oportunidade ou projeto.</p>
+                  <strong data-i18n="contact.step1.title">Envie sua mensagem</strong>
+                  <p data-i18n="contact.step1.desc">Informe os detalhes da oportunidade ou projeto.</p>
                 </div>
               </article>
 
               <article>
                 <span>02</span>
-
                 <div>
-                  <strong>Recebo por e-mail</strong>
-                  <p>As informações chegam diretamente na minha caixa de entrada.</p>
+                  <strong data-i18n="contact.step2.title">Recebo por e-mail</strong>
+                  <p data-i18n="contact.step2.desc">As informações chegam diretamente na minha caixa de entrada.</p>
                 </div>
               </article>
 
               <article>
                 <span>03</span>
-
                 <div>
-                  <strong>Entro em contato</strong>
-                  <p>Responderei pelo e-mail informado no formulário.</p>
+                  <strong data-i18n="contact.step3.title">Entro em contato</strong>
+                  <p data-i18n="contact.step3.desc">Responderei pelo e-mail informado no formulário.</p>
                 </div>
               </article>
             </div>
 
             <div class="contact-social-links">
-              <a
-                href="https://github.com/Vinicius1-dev"
-                target="_blank"
-                rel="noopener"
-              >
-                GitHub ↗
-              </a>
-
-              <a
-                href="https://linkedin.com/in/vinicius-alves-silva-b666b6364"
-                target="_blank"
-                rel="noopener"
-              >
-                LinkedIn ↗
-              </a>
+              <a href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener">GitHub ↗</a>
+              <a href="https://linkedin.com/in/vinicius-alves-silva-b666b6364" target="_blank" rel="noopener">LinkedIn ↗</a>
             </div>
           </div>
 
@@ -830,14 +811,14 @@
                 <span></span>
               </div>
 
-              <span>nova_mensagem.form</span>
+              <span data-i18n="contact.form.filename">nova_mensagem.form</span>
             </div>
 
             <div class="contact-form-content">
               <div class="form-row">
                 <div class="form-group">
                   <label for="contact-name">
-                    Nome
+                    <span data-i18n="form.name">Nome</span>
                     <span aria-hidden="true">*</span>
                   </label>
 
@@ -846,6 +827,7 @@
                     name="name"
                     type="text"
                     placeholder="Nome do recrutador"
+                    data-i18n-placeholder="form.namePlaceholder"
                     autocomplete="name"
                     maxlength="80"
                     required
@@ -854,7 +836,7 @@
 
                 <div class="form-group" id="contact-email-group">
                   <label for="contact-email">
-                    E-mail
+                    <span data-i18n="form.email">E-mail</span>
                     <span aria-hidden="true">*</span>
                   </label>
 
@@ -864,6 +846,7 @@
                     type="email"
                     inputmode="email"
                     placeholder="nome@empresa.com"
+                    data-i18n-placeholder="form.emailPlaceholder"
                     autocomplete="email"
                     autocapitalize="none"
                     spellcheck="false"
@@ -873,19 +856,15 @@
                     required
                   >
 
-                  <small
-                    class="email-feedback"
-                    id="contact-email-feedback"
-                    aria-live="polite"
-                  ></small>
+                  <small class="email-feedback" id="contact-email-feedback" aria-live="polite"></small>
                 </div>
               </div>
 
               <div class="form-row">
                 <div class="form-group">
                   <label for="contact-company">
-                    Empresa
-                    <small>Opcional</small>
+                    <span data-i18n="form.company">Empresa</span>
+                    <small data-i18n="form.optional">Opcional</small>
                   </label>
 
                   <input
@@ -893,6 +872,7 @@
                     name="company"
                     type="text"
                     placeholder="Nome da empresa"
+                    data-i18n-placeholder="form.companyPlaceholder"
                     autocomplete="organization"
                     maxlength="100"
                   >
@@ -900,45 +880,24 @@
 
                 <div class="form-group">
                   <label for="contact-subject">
-                    Assunto
+                    <span data-i18n="form.subject">Assunto</span>
                     <span aria-hidden="true">*</span>
                   </label>
 
-                  <select
-                    id="contact-subject"
-                    name="subject"
-                    required
-                  >
-                    <option value="" selected disabled>
-                      Selecione uma opção
-                    </option>
-
-                    <option value="Oportunidade de estágio">
-                      Oportunidade de estágio
-                    </option>
-
-                    <option value="Vaga júnior">
-                      Vaga júnior
-                    </option>
-
-                    <option value="Projeto">
-                      Projeto
-                    </option>
-
-                    <option value="Networking">
-                      Networking
-                    </option>
-
-                    <option value="Outro assunto">
-                      Outro assunto
-                    </option>
+                  <select id="contact-subject" name="subject" required>
+                    <option value="" selected disabled data-i18n="form.selectOption">Selecione uma opção</option>
+                    <option value="Oportunidade de estágio" data-i18n="form.subject.internship">Oportunidade de estágio</option>
+                    <option value="Vaga júnior" data-i18n="form.subject.junior">Vaga júnior</option>
+                    <option value="Projeto" data-i18n="form.subject.project">Projeto</option>
+                    <option value="Networking" data-i18n="form.subject.networking">Networking</option>
+                    <option value="Outro assunto" data-i18n="form.subject.other">Outro assunto</option>
                   </select>
                 </div>
               </div>
 
               <div class="form-group">
                 <label for="contact-message">
-                  Mensagem
+                  <span data-i18n="form.message">Mensagem</span>
                   <span aria-hidden="true">*</span>
                 </label>
 
@@ -947,6 +906,7 @@
                   name="message"
                   rows="6"
                   placeholder="Conte um pouco sobre a oportunidade, empresa ou projeto..."
+                  data-i18n-placeholder="form.messagePlaceholder"
                   minlength="10"
                   maxlength="1500"
                   required
@@ -957,53 +917,27 @@
                 </div>
               </div>
 
-              <div
-                class="form-honeypot"
-                aria-hidden="true"
-              >
-                <label for="contact-website">
-                  Não preencha este campo
-                </label>
-
-                <input
-                  id="contact-website"
-                  name="website"
-                  type="text"
-                  tabindex="-1"
-                  autocomplete="off"
-                >
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="contact-website" data-i18n="form.honeypot">Não preencha este campo</label>
+                <input id="contact-website" name="website" type="text" tabindex="-1" autocomplete="off">
               </div>
 
               <input
                 type="hidden"
                 name="_subject"
                 value="Nova mensagem pelo portfólio de Vinícius Alves"
+                data-i18n-value="form.hiddenSubject"
               >
 
-              <button
-                class="contact-submit magnetic"
-                id="contact-submit"
-                type="submit"
-              >
-                <span class="contact-submit-text">
-                  Enviar mensagem
-                </span>
-
-                <span class="contact-submit-icon" aria-hidden="true">
-                  ↗
-                </span>
-
+              <button class="contact-submit magnetic" id="contact-submit" type="submit">
+                <span class="contact-submit-text" data-i18n="form.submit">Enviar mensagem</span>
+                <span class="contact-submit-icon" aria-hidden="true">↗</span>
                 <span class="contact-submit-loader" aria-hidden="true"></span>
               </button>
 
-              <p
-                class="contact-form-status"
-                id="contact-form-status"
-                role="status"
-                aria-live="polite"
-              ></p>
+              <p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite"></p>
 
-              <p class="contact-form-privacy">
+              <p class="contact-form-privacy" data-i18n="form.privacy">
                 Seus dados serão usados somente para responder a esta mensagem.
               </p>
             </div>
@@ -1015,11 +949,11 @@
 
   <footer class="footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> Vinícius Alves. Desenvolvido com HTML, CSS e JavaScript.</p>
+      <p>&copy; <span id="year"></span> <span data-i18n="footer.rights">Vinícius Alves. Desenvolvido com HTML, CSS e JavaScript.</span></p>
     </div>
   </footer>
 
-  <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo" data-i18n-aria-label="accessibility.backToTop">↑</button>
 
   <script src="/script.js?v=20260711-2" defer></script>
 </body>
