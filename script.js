@@ -270,6 +270,145 @@ const contactStatus = document.getElementById("contact-form-status");
 const contactMessage = document.getElementById("contact-message");
 const messageCount = document.getElementById("message-count");
 const contactWebsite = document.getElementById("contact-website");
+const contactEmail = document.getElementById("contact-email");
+const contactEmailGroup = document.getElementById(
+  "contact-email-group"
+);
+const contactEmailFeedback = document.getElementById(
+  "contact-email-feedback"
+);
+
+const commonEmailDomainTypos = {
+  "gmial.com": "gmail.com",
+  "gamil.com": "gmail.com",
+  "gmai.com": "gmail.com",
+  "gmail.con": "gmail.com",
+  "gmail.co": "gmail.com",
+  "hotnail.com": "hotmail.com",
+  "hotmai.com": "hotmail.com",
+  "hotmail.con": "hotmail.com",
+  "outlok.com": "outlook.com",
+  "outllook.com": "outlook.com",
+  "outlook.con": "outlook.com"
+};
+
+function showEmailError(message) {
+  if (!contactEmail) return;
+
+  contactEmail.setCustomValidity(message);
+
+  if (contactEmailFeedback) {
+    contactEmailFeedback.textContent = message;
+  }
+
+  if (contactEmailGroup) {
+    contactEmailGroup.classList.add("has-error");
+    contactEmailGroup.classList.remove("is-valid");
+  }
+}
+
+function showValidEmail() {
+  if (!contactEmail) return;
+
+  contactEmail.setCustomValidity("");
+
+  if (contactEmailFeedback) {
+    contactEmailFeedback.textContent = "";
+  }
+
+  if (contactEmailGroup) {
+    contactEmailGroup.classList.remove("has-error");
+
+    if (contactEmail.value.trim()) {
+      contactEmailGroup.classList.add("is-valid");
+    } else {
+      contactEmailGroup.classList.remove("is-valid");
+    }
+  }
+}
+
+function validateContactEmail() {
+  if (!contactEmail) return false;
+
+  const value = contactEmail.value.trim().toLowerCase();
+
+  contactEmail.value = value;
+
+  if (!value) {
+    showEmailError("Informe seu endereço de e-mail.");
+    return false;
+  }
+
+  if (value.includes(" ")) {
+    showEmailError("O endereço de e-mail não pode conter espaços.");
+    return false;
+  }
+
+  if (value.includes("..")) {
+    showEmailError("O endereço de e-mail não pode ter pontos seguidos.");
+    return false;
+  }
+
+  const emailPattern =
+    /^[a-z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?)+$/i;
+
+  if (!emailPattern.test(value)) {
+    showEmailError(
+      "Digite um e-mail válido, como nome@empresa.com."
+    );
+
+    return false;
+  }
+
+  const [localPart, domain] = value.split("@");
+
+  if (
+    !localPart ||
+    localPart.length > 64 ||
+    value.length > 254
+  ) {
+    showEmailError("O endereço de e-mail informado é inválido.");
+    return false;
+  }
+
+  const suggestedDomain = commonEmailDomainTypos[domain];
+
+  if (suggestedDomain) {
+    showEmailError(
+      `O domínio “${domain}” parece estar errado. Você quis dizer “${suggestedDomain}”?`
+    );
+
+    return false;
+  }
+
+  showValidEmail();
+  return true;
+}
+
+if (contactEmail) {
+  contactEmail.addEventListener("input", () => {
+    if (!contactEmail.value.trim()) {
+      contactEmail.setCustomValidity("");
+
+      if (contactEmailFeedback) {
+        contactEmailFeedback.textContent = "";
+      }
+
+      if (contactEmailGroup) {
+        contactEmailGroup.classList.remove(
+          "has-error",
+          "is-valid"
+        );
+      }
+
+      return;
+    }
+
+    validateContactEmail();
+  });
+
+  contactEmail.addEventListener("blur", validateContactEmail);
+}
 
 if (contactMessage && messageCount) {
   const updateMessageCount = () => {
@@ -287,6 +426,12 @@ if (
 ) {
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
+
+    if (!validateContactEmail()) {
+      contactEmail.reportValidity();
+      contactEmail.focus();
+      return;
+    }
 
     contactStatus.textContent = "";
     contactStatus.className = "contact-form-status";
