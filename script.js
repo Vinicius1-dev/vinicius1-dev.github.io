@@ -1296,22 +1296,73 @@ const translations = {
 
 const languageSettings = {
   "pt-BR": {
-    flagClass: "flag-br",
     code: "PT",
     htmlLang: "pt-BR"
   },
 
   en: {
-    flagClass: "flag-us",
     code: "EN",
     htmlLang: "en"
   },
 
   es: {
-    flagClass: "flag-es",
     code: "ES",
     htmlLang: "es"
   }
+};
+
+const languageFlagSVG = {
+  "pt-BR":
+    '<svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">'
+    + '<rect width="36" height="24" fill="#009C3B"/>'
+    + '<polygon points="18,3 33,12 18,21 3,12" fill="#FFDF00"/>'
+    + '<circle cx="18" cy="12" r="5.3" fill="#002776"/>'
+    + '<path d="M13 11.3c3.8-1.3 7.2-.8 10 1" fill="none" stroke="#fff" stroke-width="0.8"/>'
+    + '</svg>',
+  en:
+    '<svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">'
+    + '<rect width="36" height="24" fill="#fff"/>'
+    + '<g fill="#B22234">'
+    + '<rect y="0" width="36" height="2"/>'
+    + '<rect y="4" width="36" height="2"/>'
+    + '<rect y="8" width="36" height="2"/>'
+    + '<rect y="12" width="36" height="2"/>'
+    + '<rect y="16" width="36" height="2"/>'
+    + '<rect y="20" width="36" height="2"/>'
+    + '<rect y="23" width="36" height="1"/>'
+    + '</g>'
+    + '<rect width="15.5" height="13" fill="#3C3B6E"/>'
+    + '<g fill="#fff">'
+    + '<circle cx="2.3" cy="2.2" r="0.55"/>'
+    + '<circle cx="5.2" cy="2.2" r="0.55"/>'
+    + '<circle cx="8.1" cy="2.2" r="0.55"/>'
+    + '<circle cx="11" cy="2.2" r="0.55"/>'
+    + '<circle cx="13.8" cy="2.2" r="0.55"/>'
+    + '<circle cx="3.7" cy="4.7" r="0.55"/>'
+    + '<circle cx="6.6" cy="4.7" r="0.55"/>'
+    + '<circle cx="9.5" cy="4.7" r="0.55"/>'
+    + '<circle cx="12.4" cy="4.7" r="0.55"/>'
+    + '<circle cx="2.3" cy="7.2" r="0.55"/>'
+    + '<circle cx="5.2" cy="7.2" r="0.55"/>'
+    + '<circle cx="8.1" cy="7.2" r="0.55"/>'
+    + '<circle cx="11" cy="7.2" r="0.55"/>'
+    + '<circle cx="13.8" cy="7.2" r="0.55"/>'
+    + '<circle cx="3.7" cy="9.7" r="0.55"/>'
+    + '<circle cx="6.6" cy="9.7" r="0.55"/>'
+    + '<circle cx="9.5" cy="9.7" r="0.55"/>'
+    + '<circle cx="12.4" cy="9.7" r="0.55"/>'
+    + '</g>'
+    + '</svg>',
+  es:
+    '<svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">'
+    + '<rect width="36" height="24" fill="#AA151B"/>'
+    + '<rect y="6" width="36" height="12" fill="#F1BF00"/>'
+    + '<g transform="translate(8 9)">'
+    + '<rect width="2.7" height="6.3" rx="0.4" fill="#AA151B"/>'
+    + '<rect x="0.5" y="1" width="1.7" height="2.3" fill="#F1BF00"/>'
+    + '<circle cx="1.35" cy="-0.2" r="0.8" fill="#AA151B"/>'
+    + '</g>'
+    + '</svg>'
 };
 
 let currentLanguage =
@@ -1438,15 +1489,9 @@ function applyLanguage(language) {
     });
 
   if (languageCurrentFlag) {
-    languageCurrentFlag.classList.remove(
-      "flag-br",
-      "flag-us",
-      "flag-es"
-    );
-
-    languageCurrentFlag.classList.add(
-      settings.flagClass
-    );
+    languageCurrentFlag.innerHTML =
+      languageFlagSVG[language] ||
+      languageFlagSVG["pt-BR"];
   }
 
   if (languageCurrentCode) {
