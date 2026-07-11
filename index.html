@@ -1,326 +1,1014 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark" data-lang="pt">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vinícius Alves – Desenvolvedor em Formação</title>
-  
-  <!-- Google Analytics (GA4) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX', {
-      anonymize_ip: true,
-      cookie_flags: 'SameSite=None;Secure'
-    });
-  </script>
-  
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Vinícius Alves, desenvolvedor Python em formação com foco em dados, automação e projetos práticos.">
+  <title>Vinícius Alves | Python, Dados e Automação</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="matrix-rain" aria-hidden="true">
+    <span style="--i: 0"></span>
+    <span style="--i: 1"></span>
+    <span style="--i: 2"></span>
+    <span style="--i: 3"></span>
+    <span style="--i: 4"></span>
+    <span style="--i: 5"></span>
+    <span style="--i: 6"></span>
+    <span style="--i: 7"></span>
+  </div>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
 
-  <!-- Efeito de luz suave que acompanha o cursor -->
-  <div id="cursor-glow"></div>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand-mark">VA</span>
+        <span>Vinícius Alves</span>
+      </a>
 
-  <!-- ========== NAVBAR ========== -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="#inicio" class="nav-logo">Vinícius Alves</a>
-
-      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
+      <button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+        <span></span>
+        <span></span>
       </button>
 
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#inicio"      class="nav-link" data-i18n="nav.home">Início</a></li>
-        <li><a href="#habilidades" class="nav-link" data-i18n="nav.skills">Habilidades</a></li>
-        <li><a href="#experiencia" class="nav-link" data-i18n="nav.experience">Experiência</a></li>
-        <li><a href="#projetos"    class="nav-link" data-i18n="nav.projects">Projetos</a></li>
-        <li><a href="#contato"     class="nav-link" data-i18n="nav.contact">Contato</a></li>
-      </ul>
-
-      <!-- Controles: idioma + tema -->
-      <div class="nav-controls">
-        <!-- Seletor de idioma -->
-        <div class="lang-switcher">
-          <button class="lang-btn active" id="btnPT" aria-label="Português">
-            <span class="flag">🇧🇷</span>
-          </button>
-          <button class="lang-btn" id="btnEN" aria-label="English">
-            <span class="flag">🇺🇸</span>
-          </button>
-        </div>
-        <!-- Botão tema claro/escuro -->
-        <button class="theme-btn" id="themeToggle" aria-label="Alternar tema">
-          <i class="fa-solid fa-moon" id="themeIcon"></i>
-        </button>
-      </div>
+      <nav class="nav" id="nav" aria-label="Navegação principal">
+        <a class="active" href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#habilidades">Competências</a>
+        <a href="#jornada">Jornada</a>
+        <a href="#contato">Contato</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- ========== HERO ========== -->
-  <section id="inicio" class="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-content">
-      <div class="hero-avatar">
-        <img src="vinicius.jpg" alt="Foto de Vinícius Alves" />
+  <main id="main-content">
+    <section class="hero section-shell" id="inicio">
+      <div class="hero-backdrop" aria-hidden="true">
+        <span class="grid-layer"></span>
+        <span class="mesh-panel panel-one"></span>
+        <span class="mesh-panel panel-two"></span>
+        <span class="code-line line-one"></span>
+        <span class="code-line line-two"></span>
+        <span class="code-line line-three"></span>
       </div>
-      <p class="hero-greeting" data-i18n="hero.greeting">Olá, eu sou</p>
-      <h1 class="hero-title">Vinícius Alves</h1>
-      <h2 class="hero-subtitle" data-i18n="hero.subtitle">Análise de Dados | Tecnologia</h2>
-      <p class="hero-description" data-i18n="hero.description">
-        Sou estudante do Ensino Médio e estou em formação na área de tecnologia.
-        Tenho foco em desenvolvimento de software e análise de dados, buscando
-        evolução constante por meio de projetos práticos e estudos estruturados.
-      </p>
-      <div class="hero-actions">
-        <a href="#projetos" class="btn btn-primary" data-i18n="hero.btnProjects">Ver Projetos</a>
-        <a href="#contato"  class="btn btn-outline" data-i18n="hero.btnContact">Entrar em Contato</a>
-      </div>
-    </div>
-    <div class="hero-particles" id="heroParticles"></div>
-  </section>
 
-  <!-- ========== HABILIDADES ========== -->
-  <section id="habilidades" class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title" data-i18n="skills.title">Experiência Técnica</h2>
-        <p class="section-subtitle" data-i18n="skills.subtitle">Tecnologias que estou estudando e aplicando em projetos pessoais</p>
-      </div>
-      <div class="skills-grid">
-
-        <div class="skill-card reveal">
-          <div class="skill-icon"><i class="fa-brands fa-python"></i></div>
-          <h3 class="skill-name">Python</h3>
-          <p class="skill-desc" data-i18n="skills.python">
-            Lógica de programação, scripts de automação e introdução ao desenvolvimento back-end com Python.
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Portfólio profissional</p>
+          <h1>Transformo estudos em projetos de <span>Python, dados e automação.</span></h1>
+          <p class="role">
+            Sou Vinícius Alves, estudante em formação para atuar com desenvolvimento e análise de dados. Estou construindo uma base sólida com projetos práticos, documentação e evolução constante.
           </p>
+
+          <div class="hero-badges" aria-label="Principais áreas">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Automação</span>
+            <span>Dados</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="btn primary magnetic" href="#projetos">Ver projetos</a>
+            <a class="btn secondary magnetic" href="mailto:viniciuscleberalves@gmail.com">Falar comigo</a>
+          </div>
+
+          <div class="hero-links" aria-label="Links profissionais">
+            <a href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/vinicius-alves-silva-b666b6364" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
         </div>
 
-        <div class="skill-card reveal">
-          <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
-          <h3 class="skill-name">TypeScript</h3>
-          <p class="skill-desc" data-i18n="skills.typescript">
-            Realizando curso de TypeScript, aprendendo tipagem estática e boas práticas de desenvolvimento orientado a tipos.
-          </p>
-        </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
-          <h3 class="skill-name">Git &amp; GitHub</h3>
-          <p class="skill-desc" data-i18n="skills.git">
-            Controle de versão, criação de repositórios, commits e versionamento de projetos com Git e GitHub.
-          </p>
-        </div>
-
-        <div class="skill-card reveal">
-          <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
-          <h3 class="skill-name" data-i18n="skills.logicName">Lógica de Programação</h3>
-          <p class="skill-desc" data-i18n="skills.logic">
-            Estudo de algoritmos, estruturas de controle e resolução de problemas com raciocínio lógico estruturado.
-          </p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== EXPERIÊNCIA (TIMELINE) ========== -->
-  <section id="experiencia" class="section section-dark">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title" data-i18n="exp.title">Experiência</h2>
-        <p class="section-subtitle" data-i18n="exp.subtitle">Minha jornada no mundo da tecnologia</p>
-      </div>
-
-      <div class="timeline">
-
-        <div class="timeline-item left reveal">
-          <div class="timeline-card">
-            <span class="timeline-date" data-i18n="exp.edu.date">2026 – CONCLUSÃO PREVISTA</span>
-            <h3 class="timeline-title" data-i18n="exp.edu.title">Formação – Ensino Médio</h3>
-            <p class="timeline-desc" data-i18n="exp.edu.desc">
-              Cursando o 3º ano do Ensino Médio com foco paralelo em tecnologia.
-              Buscando evolução constante por meio de estudos estruturados e projetos práticos.
-            </p>
-            <div class="timeline-tags">
-              <span class="tag" data-i18n="exp.edu.tag1">Ensino Médio – 3º ano</span>
-              <span class="tag" data-i18n="exp.edu.tag2">Conclusão: 2026</span>
+        <aside class="profile-stage reveal" aria-label="Resumo profissional">
+          <div class="photo-frame tilt-card">
+            <img src="vinicius.jpg" alt="Foto profissional de Vinícius Alves">
+            <div class="photo-caption">
+              <span>Disponível para estágio</span>
+              <strong>Python & Dados</strong>
             </div>
           </div>
-          <div class="timeline-dot"></div>
+
+          <div class="terminal-card" aria-label="Resumo técnico">
+            <div class="terminal-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <pre><code>perfil = {
+  "foco": "Python + SQL",
+  "interesse": "Dados e automação",
+  "meta": "Primeira oportunidade"
+}</code></pre>
+          </div>
+        </aside>
+      </div>
+
+      <div class="container metrics-grid reveal">
+        <article>
+          <strong data-count="4">0</strong>
+          <span>projetos publicados</span>
+        </article>
+        <article>
+          <strong>Python</strong>
+          <span>scripts, lógica e automação</span>
+        </article>
+        <article>
+          <strong>SQL</strong>
+          <span>consultas e análise de vendas</span>
+        </article>
+        <article>
+          <strong>2026</strong>
+          <span>conclusão do Ensino Médio</span>
+        </article>
+      </div>
+
+      <div class="tech-marquee" aria-hidden="true">
+        <div>
+          <span>Python</span>
+          <span>SQL</span>
+          <span>GitHub</span>
+          <span>Automação</span>
+          <span>Dados</span>
+          <span>JavaScript</span>
+          <span>Python</span>
+          <span>SQL</span>
+          <span>GitHub</span>
+          <span>Automação</span>
+          <span>Dados</span>
+          <span>JavaScript</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="about-pro">
+      <div class="about-pro-orb about-pro-orb-one" aria-hidden="true"></div>
+      <div class="about-pro-orb about-pro-orb-two" aria-hidden="true"></div>
+      <span class="about-pro-word" aria-hidden="true">SOBRE</span>
+
+      <div class="container">
+        <div class="about-pro-heading reveal">
+          <div>
+            <p class="about-pro-kicker">
+              <span>02</span>
+              Sobre mim
+            </p>
+
+            <h2>
+              Aprendo construindo,
+              <span>testando e evoluindo.</span>
+            </h2>
+          </div>
+
+          <p>
+            Estou construindo minha entrada na área de tecnologia por meio de
+            estudos, projetos práticos e evolução constante.
+          </p>
         </div>
 
-        <div class="timeline-item right reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-card">
-            <span class="timeline-date" data-i18n="exp.tech.date">Experiência técnica</span>
-            <h3 class="timeline-title" data-i18n="exp.tech.title">Em Desenvolvimento</h3>
-            <p class="timeline-desc" data-i18n="exp.tech.desc">
-              Finalizei estudos em Python e lógica de programação, com foco em desenvolvimento de aplicações.
-              Atualmente estudando SQL para manipulação de dados e JavaScript para desenvolvimento web.
-            </p>
-            <div class="timeline-tags">
-              <span class="tag">Python</span>
-              <span class="tag">SQL</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">Git</span>
-              <span class="tag">GitHub</span>
+        <div class="about-pro-grid">
+          <article class="about-story reveal">
+            <span class="about-story-number">01</span>
+
+            <div class="about-story-label">
+              Minha história
+            </div>
+
+            <blockquote>
+              "Meu jeito de aprender é transformar teoria em algo que
+              realmente funciona."
+            </blockquote>
+
+            <div class="about-story-copy">
+              <p>
+                Estou no 3º ano do Ensino Médio e venho direcionando meus
+                estudos para tecnologia, principalmente Python, SQL, Git,
+                GitHub e desenvolvimento web.
+              </p>
+
+              <p>
+                Busco minha primeira oportunidade ou estágio para aprender com
+                pessoas experientes, contribuir com tarefas reais e crescer
+                com consistência dentro de uma equipe.
+              </p>
+            </div>
+
+            <div class="about-principles">
+              <div>
+                <span>01</span>
+                <strong>Aprender</strong>
+                <p>Estudar fundamentos com organização.</p>
+              </div>
+
+              <div>
+                <span>02</span>
+                <strong>Construir</strong>
+                <p>Transformar conhecimento em projetos.</p>
+              </div>
+
+              <div>
+                <span>03</span>
+                <strong>Evoluir</strong>
+                <p>Revisar, melhorar e documentar.</p>
+              </div>
+            </div>
+          </article>
+
+          <div class="about-pro-side">
+            <article class="about-focus-card reveal tilt-card">
+              <div class="about-focus-top">
+                <div class="about-focus-dots" aria-hidden="true">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <span>perfil_atual.py</span>
+              </div>
+
+              <div class="about-focus-content">
+                <span class="about-focus-label">Foco atual</span>
+
+                <h3>Python, dados e automação</h3>
+
+                <p>
+                  Desenvolvendo uma base técnica para criar soluções,
+                  trabalhar com informações e resolver problemas utilizando
+                  programação.
+                </p>
+
+                <div class="about-code">
+                  <span>
+                    <i>foco</i>
+                    = "Python + SQL"
+                  </span>
+
+                  <span>
+                    <i>objetivo</i>
+                    = "Primeira oportunidade"
+                  </span>
+
+                  <span>
+                    <i>perfil</i>
+                    = "Aprendizado prático"
+                  </span>
+                </div>
+
+                <div class="about-focus-progress">
+                  <span></span>
+                </div>
+              </div>
+            </article>
+
+            <div class="about-info-grid">
+              <article class="about-info-card reveal">
+                <span class="about-info-number">01</span>
+                <span class="about-info-label">Formação</span>
+                <strong>Ensino Médio</strong>
+                <p>Conclusão prevista para 2026.</p>
+              </article>
+
+              <article class="about-info-card reveal">
+                <span class="about-info-number">02</span>
+                <span class="about-info-label">Objetivo</span>
+                <strong>Primeira oportunidade</strong>
+                <p>Estágio ou vaga júnior em tecnologia.</p>
+              </article>
+
+              <article class="about-info-card reveal">
+                <span class="about-info-number">03</span>
+                <span class="about-info-label">Diferencial</span>
+                <strong>Aprendizado prático</strong>
+                <p>Projetos, organização e evolução contínua.</p>
+              </article>
             </div>
           </div>
         </div>
-
-        <div class="timeline-item left reveal">
-          <div class="timeline-card">
-            <span class="timeline-date" data-i18n="exp.continuous.date">Desenvolvimento contínuo</span>
-            <h3 class="timeline-title" data-i18n="exp.continuous.title">Projetos Pessoais</h3>
-            <p class="timeline-desc" data-i18n="exp.continuous.desc">
-              Desenvolvendo projetos próprios para portfólio. Aplicando conhecimentos adquiridos
-              nos estudos para consolidar o aprendizado de forma prática.
-            </p>
-            <ul class="timeline-list">
-              <li data-i18n="exp.continuous.li1">Estudando SQL</li>
-              <li data-i18n="exp.continuous.li2">Aprendendo JavaScript</li>
-              <li data-i18n="exp.continuous.li3">Praticando Git e GitHub</li>
-              <li data-i18n="exp.continuous.li4">Realizando curso de TypeScript</li>
-              <li data-i18n="exp.continuous.li5">Desenvolvendo projetos próprios para portfólio</li>
-            </ul>
-          </div>
-          <div class="timeline-dot"></div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ========== PROJETOS ========== -->
-  <section id="projetos" class="section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title" data-i18n="projects.title">Projetos</h2>
-        <p class="section-subtitle" data-i18n="projects.subtitle">Projetos desenvolvidos durante minha formação</p>
+    <section class="projects-section" id="projetos">
+      <div class="projects-atmosphere" aria-hidden="true">
+        <span class="project-beam beam-a"></span>
+        <span class="project-beam beam-b"></span>
+        <span class="project-frame frame-a"></span>
+        <span class="project-frame frame-b"></span>
       </div>
 
-      <div class="projects-grid">
-
-        <div class="project-card reveal">
-          <div class="project-image">
-            <img src="assets/images/cobrinha.png" alt="Jogo da Cobrinha" class="project-image">
-          </div>
-          <div class="project-body">
-            <h3 class="project-name" data-i18n="projects.snake.name">Jogo da Cobrinha</h3>
-            <p class="project-desc" data-i18n="projects.snake.desc">
-              Jogo desenvolvido em Python com foco em lógica de programação,
-              controle de eventos e organização de código.
+      <div class="container">
+        <div class="projects-showcase reveal">
+          <div class="projects-copy">
+            <p class="section-kicker">Projetos</p>
+            <h2 class="section-title">Projetos que mostram <span>evolução em código</span>, dados e entrega.</h2>
+            <p>
+              Essa área agora funciona como uma vitrine técnica: cada projeto destaca o problema resolvido, a tecnologia usada e o tipo de habilidade que ele prova para quem está avaliando seu perfil.
             </p>
-            <div class="project-tags"><span class="tag">Python</span></div>
-            <a href="https://github.com/Vinicius1-dev/cobra" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
-              <i class="fa-brands fa-github"></i> <span data-i18n="projects.btnGithub">Ver no GitHub</span>
-            </a>
-          </div>
-        </div>
 
-        <div class="project-card reveal">
-          <div class="project-image">
-            <img src="assets/images/calculadora.png" alt="Calculadora" class="project-image">
-          </div>
-          <div class="project-body">
-            <h3 class="project-name">Calculadora</h3>
-            <p class="project-desc" data-i18n="projects.system.desc">
-              Calculadora desenvolvida em Python, com foco em lógica de programação e manipulação de operações matemáticas. O projeto realiza cálculos básicos e demonstra organização e funcionamento da aplicação.
-            </p>
-            <div class="project-tags">
-              <span class="tag">Python</span>
-              <span class="tag">Git</span>
+            <div class="project-proof">
+              <article>
+                <strong>01</strong>
+                <span>Lógica aplicada</span>
+              </article>
+              <article>
+                <strong>02</strong>
+                <span>Dados e consultas</span>
+              </article>
+              <article>
+                <strong>03</strong>
+                <span>Automação prática</span>
+              </article>
             </div>
-            <a href="https://github.com/Vinicius1-dev/-calculadora-python/tree/main" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
-              <i class="fa-brands fa-github"></i> <span data-i18n="projects.btnGithub">Ver no GitHub</span>
-            </a>
           </div>
+
+          <aside class="project-console tilt-card" aria-label="Resumo animado dos projetos">
+            <div class="terminal-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="console-stream">
+              <span>vinicius@portfolio:~$ analisando_projetos</span>
+              <span class="success">✓ Python: automação e lógica</span>
+              <span class="success">✓ SQL: consultas e insights</span>
+              <span class="success">✓ GitHub: repositórios publicados</span>
+            </div>
+            <div class="console-meter">
+              <i></i>
+            </div>
+          </aside>
         </div>
 
-        <div class="project-card reveal">
-          <div class="project-image">
-            <img src="assets/images/sql.png" alt="Análise de Vendas com SQL" class="project-image">
+        <div class="project-tabs reveal" aria-label="Filtrar projetos">
+          <button class="active" type="button" data-filter="todos">Todos</button>
+          <button type="button" data-filter="python">Python</button>
+          <button type="button" data-filter="sql">SQL</button>
+          <button type="button" data-filter="automacao">Automação</button>
+          <button type="button" data-filter="logica">Lógica</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal tilt-card" data-project="python automacao">
+            <a class="project-image" href="https://github.com/Vinicius1-dev/Projeto-automa-o-vendas-com-Python" target="_blank" rel="noopener">
+              <img src="assets/images/automacao.png" alt="Tela do projeto de automação de relatório de vendas">
+            </a>
+            <div class="project-body">
+              <div class="project-head">
+                <span class="project-index">01</span>
+                <span class="project-status">Projeto principal</span>
+              </div>
+              <span class="project-type">Automação</span>
+              <h3>Automação de Relatório de Vendas</h3>
+              <p>
+                Script em Python que lê dados de vendas, calcula indicadores e organiza resultados em relatório. Mostra lógica, manipulação de arquivos e foco em produtividade.
+              </p>
+              <div class="project-progress" aria-hidden="true">
+                <i style="width: 92%"></i>
+              </div>
+              <div class="tags">
+                <span>Python</span>
+                <span>CSV</span>
+                <span>Relatórios</span>
+              </div>
+              <a class="project-link" href="https://github.com/Vinicius1-dev/Projeto-automa-o-vendas-com-Python" target="_blank" rel="noopener">Ver no GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal tilt-card" data-project="sql dados">
+            <a class="project-image" href="https://github.com/Vinicius1-dev/analise-vendas-sql" target="_blank" rel="noopener">
+              <img src="assets/images/sql.png" alt="Tela do projeto de análise de vendas com SQL">
+            </a>
+            <div class="project-body">
+              <div class="project-head">
+                <span class="project-index">02</span>
+                <span class="project-status">Dados</span>
+              </div>
+              <span class="project-type">Dados</span>
+              <h3>Análise de Vendas com SQL</h3>
+              <p>
+                Consultas SQL para investigar faturamento, produtos mais vendidos e comportamento de clientes.
+              </p>
+              <div class="project-progress" aria-hidden="true">
+                <i style="width: 82%"></i>
+              </div>
+              <div class="tags">
+                <span>SQL</span>
+                <span>Análise</span>
+                <span>Insights</span>
+              </div>
+              <a class="project-link" href="https://github.com/Vinicius1-dev/analise-vendas-sql" target="_blank" rel="noopener">Ver no GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal tilt-card" data-project="python logica">
+            <a class="project-image" href="https://github.com/Vinicius1-dev/cobra" target="_blank" rel="noopener">
+              <img src="assets/images/cobrinha.png" alt="Tela do jogo da cobrinha em Python">
+            </a>
+            <div class="project-body">
+              <div class="project-head">
+                <span class="project-index">03</span>
+                <span class="project-status">Lógica</span>
+              </div>
+              <span class="project-type">Lógica</span>
+              <h3>Jogo da Cobrinha</h3>
+              <p>
+                Jogo em Python para praticar eventos, colisões, pontuação e organização de fluxo.
+              </p>
+              <div class="project-progress" aria-hidden="true">
+                <i style="width: 74%"></i>
+              </div>
+              <div class="tags">
+                <span>Python</span>
+                <span>Game loop</span>
+                <span>Lógica</span>
+              </div>
+              <a class="project-link" href="https://github.com/Vinicius1-dev/cobra" target="_blank" rel="noopener">Ver no GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal tilt-card" data-project="python fundamentos">
+            <a class="project-image" href="https://github.com/Vinicius1-dev/calculadora-python/tree/main" target="_blank" rel="noopener">
+              <img src="assets/images/calculadora.png" alt="Tela do projeto calculadora em Python">
+            </a>
+            <div class="project-body">
+              <div class="project-head">
+                <span class="project-index">04</span>
+                <span class="project-status">Base</span>
+              </div>
+              <span class="project-type">Fundamentos</span>
+              <h3>Calculadora</h3>
+              <p>
+                Aplicação criada para praticar funções, entrada de dados, operações matemáticas e validação básica.
+              </p>
+              <div class="project-progress" aria-hidden="true">
+                <i style="width: 68%"></i>
+              </div>
+              <div class="tags">
+                <span>Python</span>
+                <span>Funções</span>
+                <span>Operações</span>
+              </div>
+              <a class="project-link" href="https://github.com/Vinicius1-dev/calculadora-python/tree/main" target="_blank" rel="noopener">Ver no GitHub</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills-pro" id="habilidades">
+      <div class="skills-pro-glow skills-pro-glow-1"></div>
+      <div class="skills-pro-glow skills-pro-glow-2"></div>
+
+      <div class="skills-pro-container">
+        <div class="skills-pro-header reveal-skill">
+          <div>
+            <span class="skills-pro-kicker">
+              <span>01</span>
+              HABILIDADES
+            </span>
+
+            <h2>
+              Experiência
+              <span>técnica</span>
+            </h2>
           </div>
-          <div class="project-body">
-            <h3 class="project-name">Análise de Vendas com SQL</h3>
-            <p class="project-desc">
-              Projeto de análise de vendas utilizando SQL para extrair insights como faturamento total, produtos mais vendidos e comportamento dos clientes.
+
+          <p>
+            Tecnologias que estou estudando e aplicando em projetos pessoais.
+          </p>
+        </div>
+
+        <div class="skills-pro-grid">
+
+          <article class="skill-pro-card reveal-skill">
+            <span class="skill-pro-number">01</span>
+
+            <div class="skill-pro-icon">
+              <span>PY</span>
+            </div>
+
+            <div class="skill-pro-content">
+              <span class="skill-pro-category">
+                Linguagem
+              </span>
+
+              <h3>Python</h3>
+
+              <p>
+                Lógica de programação, scripts de automação e introdução ao
+                desenvolvimento back-end com Python.
+              </p>
+            </div>
+
+            <div class="skill-pro-bottom">
+              <span></span>
+            </div>
+          </article>
+
+          <article class="skill-pro-card reveal-skill">
+            <span class="skill-pro-number">02</span>
+
+            <div class="skill-pro-icon">
+              <span>TS</span>
+            </div>
+
+            <div class="skill-pro-content">
+              <span class="skill-pro-category">
+                Linguagem
+              </span>
+
+              <h3>TypeScript</h3>
+
+              <p>
+                Realizando curso de TypeScript, aprendendo tipagem estática e
+                boas práticas de desenvolvimento orientado a tipos.
+              </p>
+            </div>
+
+            <div class="skill-pro-bottom">
+              <span></span>
+            </div>
+          </article>
+
+          <article class="skill-pro-card reveal-skill">
+            <span class="skill-pro-number">03</span>
+
+            <div class="skill-pro-icon skill-pro-icon-green">
+              <span>Git</span>
+            </div>
+
+            <div class="skill-pro-content">
+              <span class="skill-pro-category skill-category-green">
+                Versionamento
+              </span>
+
+              <h3>Git & GitHub</h3>
+
+              <p>
+                Controle de versão, criação de repositórios, commits e
+                versionamento de projetos com Git e GitHub.
+              </p>
+            </div>
+
+            <div class="skill-pro-bottom skill-bottom-green">
+              <span></span>
+            </div>
+          </article>
+
+          <article class="skill-pro-card reveal-skill">
+            <span class="skill-pro-number">04</span>
+
+            <div class="skill-pro-icon skill-pro-icon-green">
+              <span>{ }</span>
+            </div>
+
+            <div class="skill-pro-content">
+              <span class="skill-pro-category skill-category-green">
+                Fundamentos
+              </span>
+
+              <h3>Lógica de Programação</h3>
+
+              <p>
+                Estudo de algoritmos, estruturas de controle e resolução de
+                problemas com raciocínio lógico estruturado.
+              </p>
+            </div>
+
+            <div class="skill-pro-bottom skill-bottom-green">
+              <span></span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="jornada" class="journey-section journey-pro">
+      <div class="journey-orb journey-orb-one" aria-hidden="true"></div>
+      <div class="journey-orb journey-orb-two" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="journey-pro-heading reveal">
+          <div>
+            <p class="journey-pro-kicker">
+              <span>03</span>
+              Jornada
             </p>
-            <div class="project-tags"><span class="tag">SQL</span></div>
-            <a href="https://github.com/Vinicius1-dev/analise-vendas-sql" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
-              <i class="fa-brands fa-github"></i> <span data-i18n="projects.btnGithub">Ver no GitHub</span>
-            </a>
+
+            <h2>
+              O caminho que estou
+              <span>construindo.</span>
+            </h2>
           </div>
+
+          <p class="journey-pro-intro">
+            Minha evolução acontece por etapas: primeiro construo projetos,
+            depois aprofundo meus conhecimentos e me preparo para transformar
+            aprendizado em experiência profissional.
+          </p>
         </div>
 
-        <div class="project-card reveal">
-          <div class="project-image">
-            <img src="assets/images/automacao.png" alt="Automação de Relatório de Vendas com Python" class="project-image">
+        <div class="journey-roadmap reveal">
+
+          <article class="journey-step journey-current">
+            <div class="journey-marker">
+              <span>01</span>
+            </div>
+
+            <div class="journey-card tilt-card">
+              <div class="journey-card-top">
+                <span class="journey-stage">Agora</span>
+
+                <span class="journey-status">
+                  <i></i>
+                  Em andamento
+                </span>
+              </div>
+
+              <div class="journey-icon">
+                &lt;/&gt;
+              </div>
+
+              <span class="journey-card-number">01</span>
+
+              <h3>Projetos práticos no GitHub</h3>
+
+              <p>
+                Organizando repositórios, melhorando descrições e criando
+                soluções com Python e SQL.
+              </p>
+
+              <div class="journey-tags">
+                <span>Python</span>
+                <span>SQL</span>
+                <span>GitHub</span>
+              </div>
+
+              <div class="journey-card-line">
+                <span></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="journey-step">
+            <div class="journey-marker">
+              <span>02</span>
+            </div>
+
+            <div class="journey-card tilt-card">
+              <div class="journey-card-top">
+                <span class="journey-stage">Estudos</span>
+
+                <span class="journey-label">
+                  Evolução contínua
+                </span>
+              </div>
+
+              <div class="journey-icon journey-icon-mint">
+                SQL
+              </div>
+
+              <span class="journey-card-number">02</span>
+
+              <h3>Python, dados e web</h3>
+
+              <p>
+                Consolidando lógica, consultas, estrutura de páginas e boas
+                práticas de versionamento.
+              </p>
+
+              <div class="journey-tags">
+                <span>Dados</span>
+                <span>Web</span>
+                <span>Git</span>
+              </div>
+
+              <div class="journey-card-line journey-line-mint">
+                <span></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="journey-step">
+            <div class="journey-marker">
+              <span>03</span>
+            </div>
+
+            <div class="journey-card journey-future tilt-card">
+              <div class="journey-card-top">
+                <span class="journey-stage">2026</span>
+
+                <span class="journey-label">
+                  Próximo marco
+                </span>
+              </div>
+
+              <div class="journey-icon journey-icon-lime">
+                ✓
+              </div>
+
+              <span class="journey-card-number">03</span>
+
+              <h3>Conclusão do Ensino Médio</h3>
+
+              <p>
+                Preparação para entrar no mercado como estagiário ou
+                profissional júnior em formação.
+              </p>
+
+              <div class="journey-tags">
+                <span>Estágio</span>
+                <span>Tecnologia</span>
+                <span>Carreira</span>
+              </div>
+
+              <div class="journey-card-line journey-line-lime">
+                <span></span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="journey-message reveal">
+          <div class="journey-message-icon">
+            →
           </div>
-          <div class="project-body">
-            <h3 class="project-name">Automação de Relatório de Vendas com Python</h3>
-            <p class="project-desc">
-              Projeto em Python que automatiza a análise de dados de vendas, realizando cálculos e gerando relatórios automaticamente a partir de arquivos CSV.
+
+          <div>
+            <span>Objetivo profissional</span>
+
+            <strong>
+              Transformar conhecimento em contribuição real dentro de uma equipe.
+            </strong>
+          </div>
+
+          <a href="#contato">
+            Vamos conversar
+            <span>↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact contact-form-section" id="contato">
+      <div class="container">
+        <div class="contact-form-card reveal">
+          <div class="contact-form-intro">
+            <p class="section-kicker">Contato</p>
+
+            <h2 class="section-title">
+              Vamos conversar sobre
+              <span>uma oportunidade?</span>
+            </h2>
+
+            <p class="contact-text">
+              Preencha o formulário e a mensagem será enviada diretamente
+              para o meu e-mail. Responderei utilizando o endereço informado.
             </p>
-            <div class="project-tags"><span class="tag">Python</span></div>
-            <a href="https://github.com/Vinicius1-dev/Projeto-automa-o-vendas-com-Python" target="_blank" rel="noopener" class="btn btn-sm btn-primary">
-              <i class="fa-brands fa-github"></i> <span data-i18n="projects.btnGithub">Ver no GitHub</span>
-            </a>
+
+            <div class="contact-form-details">
+              <article>
+                <span>01</span>
+
+                <div>
+                  <strong>Envie sua mensagem</strong>
+                  <p>Informe os detalhes da oportunidade ou projeto.</p>
+                </div>
+              </article>
+
+              <article>
+                <span>02</span>
+
+                <div>
+                  <strong>Recebo por e-mail</strong>
+                  <p>As informações chegam diretamente na minha caixa de entrada.</p>
+                </div>
+              </article>
+
+              <article>
+                <span>03</span>
+
+                <div>
+                  <strong>Entro em contato</strong>
+                  <p>Responderei pelo e-mail informado no formulário.</p>
+                </div>
+              </article>
+            </div>
+
+            <div class="contact-social-links">
+              <a
+                href="https://github.com/Vinicius1-dev"
+                target="_blank"
+                rel="noopener"
+              >
+                GitHub ↗
+              </a>
+
+              <a
+                href="https://linkedin.com/in/vinicius-alves-silva-b666b6364"
+                target="_blank"
+                rel="noopener"
+              >
+                LinkedIn ↗
+              </a>
+            </div>
           </div>
+
+          <form
+            class="contact-form"
+            id="contact-form"
+            action="https://formspree.io/f/mgogwyez"
+            method="POST"
+          >
+            <div class="contact-form-top">
+              <div class="contact-form-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <span>nova_mensagem.form</span>
+            </div>
+
+            <div class="contact-form-content">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-name">
+                    Nome
+                    <span aria-hidden="true">*</span>
+                  </label>
+
+                  <input
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    placeholder="Nome do recrutador"
+                    autocomplete="name"
+                    maxlength="80"
+                    required
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">
+                    E-mail
+                    <span aria-hidden="true">*</span>
+                  </label>
+
+                  <input
+                    id="contact-email"
+                    name="email"
+                    type="email"
+                    placeholder="nome@empresa.com"
+                    autocomplete="email"
+                    maxlength="120"
+                    required
+                  >
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="contact-company">
+                    Empresa
+                    <small>Opcional</small>
+                  </label>
+
+                  <input
+                    id="contact-company"
+                    name="company"
+                    type="text"
+                    placeholder="Nome da empresa"
+                    autocomplete="organization"
+                    maxlength="100"
+                  >
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject">
+                    Assunto
+                    <span aria-hidden="true">*</span>
+                  </label>
+
+                  <select
+                    id="contact-subject"
+                    name="subject"
+                    required
+                  >
+                    <option value="" selected disabled>
+                      Selecione uma opção
+                    </option>
+
+                    <option value="Oportunidade de estágio">
+                      Oportunidade de estágio
+                    </option>
+
+                    <option value="Vaga júnior">
+                      Vaga júnior
+                    </option>
+
+                    <option value="Projeto">
+                      Projeto
+                    </option>
+
+                    <option value="Networking">
+                      Networking
+                    </option>
+
+                    <option value="Outro assunto">
+                      Outro assunto
+                    </option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">
+                  Mensagem
+                  <span aria-hidden="true">*</span>
+                </label>
+
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="6"
+                  placeholder="Conte um pouco sobre a oportunidade, empresa ou projeto..."
+                  minlength="10"
+                  maxlength="1500"
+                  required
+                ></textarea>
+
+                <div class="message-counter">
+                  <span id="message-count">0</span>/1500
+                </div>
+              </div>
+
+              <div
+                class="form-honeypot"
+                aria-hidden="true"
+              >
+                <label for="contact-website">
+                  Não preencha este campo
+                </label>
+
+                <input
+                  id="contact-website"
+                  name="website"
+                  type="text"
+                  tabindex="-1"
+                  autocomplete="off"
+                >
+              </div>
+
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nova mensagem pelo portfólio de Vinícius Alves"
+              >
+
+              <button
+                class="contact-submit magnetic"
+                id="contact-submit"
+                type="submit"
+              >
+                <span class="contact-submit-text">
+                  Enviar mensagem
+                </span>
+
+                <span class="contact-submit-icon" aria-hidden="true">
+                  ↗
+                </span>
+
+                <span class="contact-submit-loader" aria-hidden="true"></span>
+              </button>
+
+              <p
+                class="contact-form-status"
+                id="contact-form-status"
+                role="status"
+                aria-live="polite"
+              ></p>
+
+              <p class="contact-form-privacy">
+                Seus dados serão usados somente para responder a esta mensagem.
+              </p>
+            </div>
+          </form>
         </div>
-
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- ========== CONTATO ========== -->
-  <section id="contato" class="section section-dark">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title" data-i18n="contact.title">Contato</h2>
-        <p class="section-subtitle" data-i18n="contact.subtitle">Vamos conversar? Entre em contato por qualquer canal abaixo</p>
-      </div>
-
-      <div class="contact-grid">
-
-        <a href="mailto:viniciuscleberalves@gmail.com" class="contact-card reveal">
-          <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-          <h3 class="contact-label">E-mail</h3>
-          <p class="contact-value">viniciuscleberalves@gmail.com</p>
-        </a>
-
-        <a href="https://github.com/Vinicius1-dev" target="_blank" rel="noopener" class="contact-card reveal">
-          <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
-          <h3 class="contact-label">GitHub</h3>
-          <p class="contact-value">github.com/Vinicius1-dev</p>
-        </a>
-
-        <a href="https://linkedin.com/in/vinicius-alves-silva-b666b6364" target="_blank" rel="noopener" class="contact-card reveal">
-          <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
-          <h3 class="contact-label">LinkedIn</h3>
-          <p class="contact-value">linkedin.com/in/vinicius-alves-silva</p>
-        </a>
-
-      </div>
-
-      <div class="contact-cta reveal">
-        <a href="mailto:viniciuscleberalves@gmail.com" class="btn btn-primary btn-lg">
-          <i class="fa-solid fa-paper-plane"></i> <span data-i18n="contact.btnSend">Enviar Mensagem</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
   <footer class="footer">
-    <p data-i18n="footer.text">&copy; 2026 Vinícius Alves &ndash; Desenvolvedor em Formação</p>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Vinícius Alves. Desenvolvido com HTML, CSS e JavaScript.</p>
+    </div>
   </footer>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
 
   <script src="script.js"></script>
 </body>
