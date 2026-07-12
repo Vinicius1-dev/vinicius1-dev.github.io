@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg4" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06152d" />
+      <stop offset="100%" stop-color="#12294d" />
+    </linearGradient>
+    <linearGradient id="calc" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14243f" />
+      <stop offset="100%" stop-color="#0d1b2d" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" rx="40" fill="url(#bg4)" />
+  <g transform="translate(240 120)">
+    <rect width="720" height="560" rx="60" fill="url(#calc)" stroke="#48c6ff" stroke-opacity="0.18" stroke-width="8" />
+    <rect x="100" y="60" width="520" height="140" rx="32" fill="#10243f" />
+    <text x="120" y="140" fill="#8df4ff" font-size="72" font-family="Inter, sans-serif" font-weight="700">134 257</text>
+    <rect x="90" y="240" width="520" height="68" rx="24" fill="#19324b" />
+    <g transform="translate(120 260)">
+      <rect x="0" y="0" width="110" height="110" rx="28" fill="#1f4964" />
+      <rect x="130" y="0" width="110" height="110" rx="28" fill="#1f4964" />
+      <rect x="260" y="0" width="110" height="110" rx="28" fill="#1f4964" />
+      <rect x="390" y="0" width="110" height="110" rx="28" fill="#38b1ff" />
+      <rect x="0" y="130" width="110" height="110" rx="28" fill="#1f4964" />
+      <rect x="130" y="130" width="110" height="110" rx="28" fill="#1f4964" />
+      <rect x="260" y="130" width="110" height="110" rx="28" fill="#1f4964" />
+      <rect x="390" y="130" width="110" height="110" rx="28" fill="#1f4964" />
+      <rect x="0" y="260" width="110" height="110" rx="28" fill="#1f4964" />
+      <rect x="130" y="260" width="110" height="110" rx="28" fill="#1f4964" />
+      <rect x="260" y="260" width="110" height="110" rx="28" fill="#1f4964" />
+      <rect x="390" y="260" width="110" height="110" rx="28" fill="#19d2ff" />
+    </g>
+    <text x="130" y="320" fill="#ddf7ff" font-size="48" font-family="Inter, sans-serif" font-weight="700">7</text>
+    <text x="260" y="320" fill="#ddf7ff" font-size="48" font-family="Inter, sans-serif" font-weight="700">8</text>
+    <text x="390" y="320" fill="#ddf7ff" font-size="48" font-family="Inter, sans-serif" font-weight="700">9</text>
+    <text x="520" y="320" fill="#071c2f" font-size="48" font-family="Inter, sans-serif" font-weight="700">÷</text>
+    <text x="130" y="460" fill="#ddf7ff" font-size="48" font-family="Inter, sans-serif" font-weight="700">4</text>
+    <text x="260" y="460" fill="#ddf7ff" font-size="48" font-family="Inter, sans-serif" font-weight="700">5</text>
+    <text x="390" y="460" fill="#ddf7ff" font-size="48" font-family="Inter, sans-serif" font-weight="700">6</text>
+    <text x="520" y="460" fill="#071c2f" font-size="48" font-family="Inter, sans-serif" font-weight="700">×</text>
+    <text x="130" y="600" fill="#ddf7ff" font-size="48" font-family="Inter, sans-serif" font-weight="700">1</text>
+    <text x="260" y="600" fill="#ddf7ff" font-size="48" font-family="Inter, sans-serif" font-weight="700">2</text>
+    <text x="390" y="600" fill="#ddf7ff" font-size="48" font-family="Inter, sans-serif" font-weight="700">3</text>
+    <text x="520" y="600" fill="#071c2f" font-size="48" font-family="Inter, sans-serif" font-weight="700">−</text>
+  </g>
+</svg>
