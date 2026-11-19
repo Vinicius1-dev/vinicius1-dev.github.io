@@ -6519,3 +6519,12 @@ span {
     transition: none;
   }
 }
+
+
+.project-link-disabled {
+  display: inline-block;
+  color: var(--muted);
+  cursor: default;
+  text-decoration: none;
+  opacity: 0.8;
+}

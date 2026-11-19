@@ -551,10 +551,10 @@ const languageOptions =
 const translations = {
   "pt-BR": {
     pageTitle:
-      "Vinícius Alves | Python, Dados e Automação",
+      "Vinícius Alves | Desenvolvedor Backend em Formação",
 
     pageDescription:
-      "Portfólio de Vinícius Alves, desenvolvedor Python em formação com foco em dados, automação e projetos práticos.",
+      "Portfólio de Vinícius Alves, desenvolvedor em formação com foco em backend, Python, TypeScript, APIs e projetos próprios.",
 
     "language.select": "Selecionar idioma",
     "language.available": "Idiomas disponíveis",
@@ -575,9 +575,9 @@ const translations = {
 
     "hero.kicker": "Portfólio profissional",
     "hero.title":
-      'Transformo estudos em projetos de <span>Python, dados e automação.</span>',
+      'Desenvolvedor em formação com foco em <span>Backend, Python e TypeScript.</span>',
     "hero.description":
-      "Sou Vinícius Alves, estudante em formação para atuar com desenvolvimento e análise de dados. Estou construindo uma base sólida com projetos práticos, documentação e evolução constante.",
+      "Sou Vinícius Alves. Estudo desenvolvimento de software e construo projetos próprios para transformar conhecimento em soluções práticas. Tenho interesse em Backend, APIs e desenvolvimento de aplicações.",
     "hero.mainAreas": "Principais áreas",
     "hero.badge.automation": "Automação",
     "hero.badge.data": "Dados",
@@ -587,10 +587,10 @@ const translations = {
     "hero.professionalSummary": "Resumo profissional",
     "hero.photoAlt": "Foto profissional de Vinícius Alves",
     "hero.available": "Disponível para estágio",
-    "hero.pythonData": "Python & Dados",
+    "hero.pythonData": "Backend & APIs",
     "hero.technicalSummary": "Resumo técnico",
     "hero.terminal.code":
-      'perfil = {\n  "foco": "Python + SQL",\n  "interesse": "Dados e automação",\n  "meta": "Primeira oportunidade"\n}',
+      'perfil = {\n  "foco": "Backend + APIs",\n  "stack": "Python + TypeScript",\n  "meta": "Primeira oportunidade"\n}',
     "hero.metric.projects": "projetos publicados",
     "hero.metric.python": "scripts, lógica e automação",
     "hero.metric.sql": "consultas e análise de vendas",
@@ -603,14 +603,14 @@ const translations = {
     "about.title":
       'Aprendo construindo,<span>testando e evoluindo.</span>',
     "about.subtitle":
-      "Estou construindo minha entrada na área de tecnologia por meio de estudos, projetos práticos e evolução constante.",
+      "Tenho direcionado meus estudos para desenvolvimento de software, combinando fundamentos técnicos, projetos próprios e aprendizado contínuo.",
     "about.storyLabel": "Minha história",
     "about.quote":
       '"Meu jeito de aprender é transformar teoria em algo que realmente funciona."',
     "about.story.p1":
-      "Estou no 3º ano do Ensino Médio e venho direcionando meus estudos para tecnologia, principalmente Python, SQL, Git, GitHub e desenvolvimento web.",
+      "Concluo o Ensino Médio em 2026 e pretendo seguir estudando tecnologia na graduação, com interesse em Engenharia de Software. Tenho estudado Python, TypeScript, SQL, Git e desenvolvimento de aplicações.",
     "about.story.p2":
-      "Busco minha primeira oportunidade ou estágio para aprender com pessoas experientes, contribuir com tarefas reais e crescer com consistência dentro de uma equipe.",
+      "Também estudo inglês e busco uma oportunidade de estágio ou início de carreira em desenvolvimento, onde possa aprender com uma equipe, contribuir com tarefas reais e evoluir profissionalmente.",
     "about.principle.learn.title": "Aprender",
     "about.principle.learn.desc": "Estudar fundamentos com organização.",
     "about.principle.build.title": "Construir",
@@ -619,10 +619,10 @@ const translations = {
     "about.principle.evolve.desc": "Revisar, melhorar e documentar.",
     "about.focus.filename": "perfil_atual.py",
     "about.focus.label": "Foco atual",
-    "about.focus.title": "Python, dados e automação",
+    "about.focus.title": "Backend, APIs e aplicações",
     "about.focus.desc":
       "Desenvolvendo uma base técnica para criar soluções, trabalhar com informações e resolver problemas utilizando programação.",
-    "about.focus.code.foco": "<i>foco</i> = \"Python + SQL\"",
+    "about.focus.code.foco": "<i>foco</i> = \"Backend + APIs\"",
     "about.focus.code.objective":
       "<i>objetivo</i> = \"Primeira oportunidade\"",
     "about.focus.code.profile":
@@ -690,6 +690,10 @@ const translations = {
       "Aplicação criada para praticar funções, entrada de dados, operações matemáticas e validação básica.",
     "projects.p4.tag.functions": "Funções",
     "projects.p4.tag.operations": "Operações",
+    "projects.finora.status": "Em desenvolvimento",
+    "projects.finora.type": "Projeto pessoal",
+    "projects.finora.desc": "Dashboard pessoal de investimentos em desenvolvimento, criado para reunir informações da carteira e acompanhar ativos em uma única interface.",
+    "projects.finora.note": "Detalhes em breve",
 
     "skills.kickerWord": "HABILIDADES",
     "skills.title":
@@ -799,10 +803,10 @@ const translations = {
 
   en: {
     pageTitle:
-      "Vinícius Alves | Python, Data and Automation",
+      "Vinícius Alves | Backend Developer in Training",
 
     pageDescription:
-      "Portfolio of Vinícius Alves, a Python developer in training focused on data, automation and practical projects.",
+      "Portfolio of Vinícius Alves, an aspiring developer focused on backend, Python, TypeScript, APIs and personal projects.",
 
     "language.select": "Select language",
     "language.available": "Available languages",
@@ -823,9 +827,9 @@ const translations = {
 
     "hero.kicker": "Professional portfolio",
     "hero.title":
-      'I turn my studies into <span>Python, data and automation projects.</span>',
+      'Developer in training focused on <span>Backend, Python and TypeScript.</span>',
     "hero.description":
-      "I am Vinícius Alves, a student preparing to work in software development and data analysis. I am building a solid foundation through practical projects, documentation and continuous improvement.",
+      "I am Vinícius Alves. I study software development and build personal projects to turn knowledge into practical solutions, with an interest in backend systems, APIs and applications.",
     "hero.mainAreas": "Main areas",
     "hero.badge.automation": "Automation",
     "hero.badge.data": "Data",
@@ -835,10 +839,10 @@ const translations = {
     "hero.professionalSummary": "Professional summary",
     "hero.photoAlt": "Professional photo of Vinícius Alves",
     "hero.available": "Available for internship",
-    "hero.pythonData": "Python & Data",
+    "hero.pythonData": "Backend & APIs",
     "hero.technicalSummary": "Technical summary",
     "hero.terminal.code":
-      'profile = {\n  "focus": "Python + SQL",\n  "interest": "Data and automation",\n  "goal": "First opportunity"\n}',
+      'profile = {\n  "focus": "Backend + APIs",\n  "stack": "Python + TypeScript",\n  "goal": "First opportunity"\n}',
     "hero.metric.projects": "published projects",
     "hero.metric.python": "scripts, logic and automation",
     "hero.metric.sql": "queries and sales analysis",
@@ -851,14 +855,14 @@ const translations = {
     "about.title":
       'I learn by building,<span>testing and evolving.</span>',
     "about.subtitle":
-      "I am building my entry into technology through study, practical projects and constant development.",
+      "I am focusing my studies on software development through technical fundamentals, personal projects and continuous learning.",
     "about.storyLabel": "My story",
     "about.quote":
       '"My way of learning is turning theory into something that really works."',
     "about.story.p1":
-      "I am in my final year of high school and I have been directing my studies toward technology, especially Python, SQL, Git, GitHub and web development.",
+      "I expect to complete high school in 2026 and plan to continue studying technology at university, with an interest in Software Engineering. I have been studying Python, TypeScript, SQL, Git and application development.",
     "about.story.p2":
-      "I am seeking my first opportunity or internship to learn from experienced people, contribute to real tasks and grow consistently within a team.",
+      "I am also studying English and looking for an internship or entry-level development opportunity where I can learn from a team, contribute to real tasks and grow professionally.",
     "about.principle.learn.title": "Learn",
     "about.principle.learn.desc": "Study fundamentals with organization.",
     "about.principle.build.title": "Build",
@@ -867,10 +871,10 @@ const translations = {
     "about.principle.evolve.desc": "Review, improve and document.",
     "about.focus.filename": "current_profile.py",
     "about.focus.label": "Current focus",
-    "about.focus.title": "Python, data and automation",
+    "about.focus.title": "Backend, APIs and applications",
     "about.focus.desc":
       "Developing a technical foundation to create solutions, work with information and solve problems using programming.",
-    "about.focus.code.foco": "<i>focus</i> = \"Python + SQL\"",
+    "about.focus.code.foco": "<i>focus</i> = \"Backend + APIs\"",
     "about.focus.code.objective":
       "<i>objective</i> = \"First opportunity\"",
     "about.focus.code.profile":
@@ -938,6 +942,10 @@ const translations = {
       "Application created to practice functions, data input, math operations and basic validation.",
     "projects.p4.tag.functions": "Functions",
     "projects.p4.tag.operations": "Operations",
+    "projects.finora.status": "In development",
+    "projects.finora.type": "Personal project",
+    "projects.finora.desc": "A personal investment dashboard in development, designed to bring portfolio information together and track assets in one interface.",
+    "projects.finora.note": "More details soon",
 
     "skills.kickerWord": "SKILLS",
     "skills.title":
@@ -1047,10 +1055,10 @@ const translations = {
 
   es: {
     pageTitle:
-      "Vinícius Alves | Python, Datos y Automatización",
+      "Vinícius Alves | Desarrollador Backend en Formación",
 
     pageDescription:
-      "Portafolio de Vinícius Alves, desarrollador Python en formación enfocado en datos, automatización y proyectos prácticos.",
+      "Portafolio de Vinícius Alves, desarrollador en formación enfocado en backend, Python, TypeScript, APIs y proyectos personales.",
 
     "language.select": "Seleccionar idioma",
     "language.available": "Idiomas disponibles",
@@ -1071,9 +1079,9 @@ const translations = {
 
     "hero.kicker": "Portafolio profesional",
     "hero.title":
-      'Transformo mis estudios en proyectos de <span>Python, datos y automatización.</span>',
+      'Desarrollador en formación enfocado en <span>Backend, Python y TypeScript.</span>',
     "hero.description":
-      "Soy Vinícius Alves, estudiante en formación para trabajar en desarrollo de software y análisis de datos. Estoy construyendo una base sólida mediante proyectos prácticos, documentación y evolución constante.",
+      "Soy Vinícius Alves. Estudio desarrollo de software y construyo proyectos personales para convertir conocimientos en soluciones prácticas, con interés en backend, APIs y aplicaciones.",
     "hero.mainAreas": "Áreas principales",
     "hero.badge.automation": "Automatización",
     "hero.badge.data": "Datos",
@@ -1083,10 +1091,10 @@ const translations = {
     "hero.professionalSummary": "Resumen profesional",
     "hero.photoAlt": "Foto profesional de Vinícius Alves",
     "hero.available": "Disponible para prácticas",
-    "hero.pythonData": "Python & Datos",
+    "hero.pythonData": "Backend & APIs",
     "hero.technicalSummary": "Resumen técnico",
     "hero.terminal.code":
-      'perfil = {\n  "foco": "Python + SQL",\n  "interés": "Datos y automatización",\n  "meta": "Primera oportunidad"\n}',
+      'perfil = {\n  "foco": "Backend + APIs",\n  "stack": "Python + TypeScript",\n  "meta": "Primera oportunidad"\n}',
     "hero.metric.projects": "proyectos publicados",
     "hero.metric.python": "scripts, lógica y automatización",
     "hero.metric.sql": "consultas y análisis de ventas",
@@ -1099,14 +1107,14 @@ const translations = {
     "about.title":
       'Aprendo construyendo,<span>probando y evolucionando.</span>',
     "about.subtitle":
-      "Estoy construyendo mi entrada en el área de tecnología mediante estudios, proyectos prácticos y evolución constante.",
+      "Estoy enfocando mis estudios en el desarrollo de software mediante fundamentos técnicos, proyectos personales y aprendizaje continuo.",
     "about.storyLabel": "Mi historia",
     "about.quote":
       '"Mi forma de aprender es transformar la teoría en algo que realmente funciona."',
     "about.story.p1":
-      "Estoy en el 3º año de la escuela secundaria y he estado orientando mis estudios hacia la tecnología, principalmente Python, SQL, Git, GitHub y desarrollo web.",
+      "Espero terminar la educación secundaria en 2026 y planeo continuar estudiando tecnología en la universidad, con interés en Ingeniería de Software. Estoy estudiando Python, TypeScript, SQL, Git y desarrollo de aplicaciones.",
     "about.story.p2":
-      "Busco mi primera oportunidad o prácticas para aprender con personas experimentadas, contribuir con tareas reales y crecer de manera consistente dentro de un equipo.",
+      "También estoy estudiando inglés y busco una oportunidad de prácticas o de inicio de carrera en desarrollo, donde pueda aprender de un equipo, contribuir con tareas reales y crecer profesionalmente.",
     "about.principle.learn.title": "Aprender",
     "about.principle.learn.desc": "Estudiar fundamentos con organización.",
     "about.principle.build.title": "Construir",
@@ -1115,10 +1123,10 @@ const translations = {
     "about.principle.evolve.desc": "Revisar, mejorar y documentar.",
     "about.focus.filename": "perfil_actual.py",
     "about.focus.label": "Enfoque actual",
-    "about.focus.title": "Python, datos y automatización",
+    "about.focus.title": "Backend, APIs y aplicaciones",
     "about.focus.desc":
       "Desarrollando una base técnica para crear soluciones, trabajar con información y resolver problemas utilizando programación.",
-    "about.focus.code.foco": "<i>foco</i> = \"Python + SQL\"",
+    "about.focus.code.foco": "<i>foco</i> = \"Backend + APIs\"",
     "about.focus.code.objective":
       "<i>objetivo</i> = \"Primera oportunidad\"",
     "about.focus.code.profile":
@@ -1186,6 +1194,10 @@ const translations = {
       "Aplicación creada para practicar funciones, entrada de datos, operaciones matemáticas y validación básica.",
     "projects.p4.tag.functions": "Funciones",
     "projects.p4.tag.operations": "Operaciones",
+    "projects.finora.status": "En desarrollo",
+    "projects.finora.type": "Proyecto personal",
+    "projects.finora.desc": "Panel personal de inversiones en desarrollo, creado para reunir información de la cartera y seguir activos en una sola interfaz.",
+    "projects.finora.note": "Más detalles pronto",
 
     "skills.kickerWord": "HABILIDADES",
     "skills.title":
