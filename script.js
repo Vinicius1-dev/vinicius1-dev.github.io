@@ -575,9 +575,9 @@ const translations = {
 
     "hero.kicker": "Portfólio profissional",
     "hero.title":
-      'Desenvolvedor em formação com foco em <span>Backend, Python e TypeScript.</span>',
+      'Desenvolvedor Python | <span>Backend & Automação</span>',
     "hero.description":
-      "Sou Vinícius Alves. Estudo desenvolvimento de software e construo projetos próprios para transformar conhecimento em soluções práticas. Tenho interesse em Backend, APIs e desenvolvimento de aplicações.",
+      "Atuo em projetos próprios com Python e desenvolvimento Backend. Tenho experiência prática de estudo com FastAPI, SQL, APIs REST e PostgreSQL, além de interesse em automação e análise de dados.",
     "hero.mainAreas": "Principais áreas",
     "hero.badge.automation": "Automação",
     "hero.badge.data": "Dados",
@@ -608,7 +608,7 @@ const translations = {
     "about.quote":
       '"Meu jeito de aprender é transformar teoria em algo que realmente funciona."',
     "about.story.p1":
-      "Concluo o Ensino Médio em 2026 e pretendo seguir estudando tecnologia na graduação, com interesse em Engenharia de Software. Tenho estudado Python, TypeScript, SQL, Git e desenvolvimento de aplicações.",
+      "Estou concluindo o Ensino Médio em 2026 e considero cursar Engenharia de Software na faculdade. Ainda estou avaliando essa próxima etapa, mas quero continuar me desenvolvendo na área de tecnologia. Tenho estudado Python, FastAPI, SQL, APIs REST, PostgreSQL e Git.",
     "about.story.p2":
       "Também estudo inglês e busco uma oportunidade de estágio ou início de carreira em desenvolvimento, onde possa aprender com uma equipe, contribuir com tarefas reais e evoluir profissionalmente.",
     "about.principle.learn.title": "Aprender",
@@ -827,9 +827,9 @@ const translations = {
 
     "hero.kicker": "Professional portfolio",
     "hero.title":
-      'Developer in training focused on <span>Backend, Python and TypeScript.</span>',
+      'Python Developer | <span>Backend & Automation</span>',
     "hero.description":
-      "I am Vinícius Alves. I study software development and build personal projects to turn knowledge into practical solutions, with an interest in backend systems, APIs and applications.",
+      "I build personal projects with Python and backend development. My practical learning includes FastAPI, SQL, REST APIs and PostgreSQL, with an interest in automation and data analysis.",
     "hero.mainAreas": "Main areas",
     "hero.badge.automation": "Automation",
     "hero.badge.data": "Data",
@@ -860,7 +860,7 @@ const translations = {
     "about.quote":
       '"My way of learning is turning theory into something that really works."',
     "about.story.p1":
-      "I expect to complete high school in 2026 and plan to continue studying technology at university, with an interest in Software Engineering. I have been studying Python, TypeScript, SQL, Git and application development.",
+      "I expect to finish high school in 2026 and am considering a degree in Software Engineering. I am still evaluating this next step, but I want to keep developing my skills in technology. I have been studying Python, FastAPI, SQL, REST APIs, PostgreSQL and Git.",
     "about.story.p2":
       "I am also studying English and looking for an internship or entry-level development opportunity where I can learn from a team, contribute to real tasks and grow professionally.",
     "about.principle.learn.title": "Learn",
@@ -1079,9 +1079,9 @@ const translations = {
 
     "hero.kicker": "Portafolio profesional",
     "hero.title":
-      'Desarrollador en formación enfocado en <span>Backend, Python y TypeScript.</span>',
+      'Desarrollador Python | <span>Backend y Automatización</span>',
     "hero.description":
-      "Soy Vinícius Alves. Estudio desarrollo de software y construyo proyectos personales para convertir conocimientos en soluciones prácticas, con interés en backend, APIs y aplicaciones.",
+      "Desarrollo proyectos personales con Python y backend. Mi aprendizaje práctico incluye FastAPI, SQL, APIs REST y PostgreSQL, con interés en automatización y análisis de datos.",
     "hero.mainAreas": "Áreas principales",
     "hero.badge.automation": "Automatización",
     "hero.badge.data": "Datos",
@@ -1112,7 +1112,7 @@ const translations = {
     "about.quote":
       '"Mi forma de aprender es transformar la teoría en algo que realmente funciona."',
     "about.story.p1":
-      "Espero terminar la educación secundaria en 2026 y planeo continuar estudiando tecnología en la universidad, con interés en Ingeniería de Software. Estoy estudiando Python, TypeScript, SQL, Git y desarrollo de aplicaciones.",
+      "Espero terminar la educación secundaria en 2026 y estoy considerando estudiar Ingeniería de Software en la universidad. Todavía estoy evaluando este próximo paso, pero quiero seguir desarrollándome en tecnología. Estudio Python, FastAPI, SQL, APIs REST, PostgreSQL y Git.",
     "about.story.p2":
       "También estoy estudiando inglés y busco una oportunidad de prácticas o de inicio de carrera en desarrollo, donde pueda aprender de un equipo, contribuir con tareas reales y crecer profesionalmente.",
     "about.principle.learn.title": "Aprender",
