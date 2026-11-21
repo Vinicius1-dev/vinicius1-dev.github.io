@@ -603,12 +603,12 @@ const translations = {
     "about.title":
       'Aprendo construindo,<span>testando e evoluindo.</span>',
     "about.subtitle":
-      "Tenho direcionado meus estudos para desenvolvimento de software, combinando fundamentos técnicos, projetos próprios e aprendizado contínuo.",
+      "Estudante de desenvolvimento de software. Aprendo criando projetos e resolvendo problemas.",
     "about.storyLabel": "Minha história",
     "about.quote":
       '"Meu jeito de aprender é transformar teoria em algo que realmente funciona."',
     "about.story.p1":
-      "Concluo o Ensino Médio em 2026 e pretendo seguir estudando tecnologia na graduação, com interesse em Engenharia de Software. Tenho estudado Python, TypeScript, SQL, Git e desenvolvimento de aplicações.",
+      "Concluindo o Ensino Médio em 2026. Estudo Python, TypeScript, SQL e Engenharia de Software.",
     "about.story.p2":
       "Também estudo inglês e busco uma oportunidade de estágio ou início de carreira em desenvolvimento, onde possa aprender com uma equipe, contribuir com tarefas reais e evoluir profissionalmente.",
     "about.principle.learn.title": "Aprender",
@@ -621,7 +621,7 @@ const translations = {
     "about.focus.label": "Foco atual",
     "about.focus.title": "Backend, APIs e aplicações",
     "about.focus.desc":
-      "Desenvolvendo uma base técnica para criar soluções, trabalhar com informações e resolver problemas utilizando programação.",
+      "Construindo aplicações e APIs com foco em Backend.",
     "about.focus.code.foco": "<i>foco</i> = \"Backend + APIs\"",
     "about.focus.code.objective":
       "<i>objetivo</i> = \"Primeira oportunidade\"",
@@ -629,19 +629,22 @@ const translations = {
       "<i>perfil</i> = \"Aprendizado prático\"",
     "about.info.education.label": "Formação",
     "about.info.education.title": "Ensino Médio",
-    "about.info.education.desc": "Conclusão prevista para 2026.",
+    "about.info.education.desc":
+      "Conclusão em 2026.",
     "about.info.goal.label": "Objetivo",
     "about.info.goal.title": "Primeira oportunidade",
-    "about.info.goal.desc": "Estágio ou vaga júnior em tecnologia.",
+    "about.info.goal.desc":
+      "Estágio em desenvolvimento.",
     "about.info.diff.label": "Diferencial",
     "about.info.diff.title": "Aprendizado prático",
-    "about.info.diff.desc": "Projetos, organização e evolução contínua.",
+    "about.info.diff.desc":
+      "Projetos próprios no GitHub.",
 
     "projects.kicker": "Projetos",
     "projects.title":
       'Projetos que mostram <span>evolução em código</span>, dados e entrega.',
     "projects.desc":
-      "Essa área agora funciona como uma vitrine técnica: cada projeto destaca o problema resolvido, a tecnologia usada e o tipo de habilidade que ele prova para quem está avaliando seu perfil.",
+      "Projetos práticos, tecnologias utilizadas e código no GitHub.",
     "projects.proof.logic": "Lógica aplicada",
     "projects.proof.data": "Dados e consultas",
     "projects.proof.automation": "Automação prática",
@@ -662,7 +665,7 @@ const translations = {
     "projects.p1.type": "Automação",
     "projects.p1.title": "Automação de Relatório de Vendas",
     "projects.p1.desc":
-      "Script em Python que lê dados de vendas, calcula indicadores e organiza resultados em relatório. Mostra lógica, manipulação de arquivos e foco em produtividade.",
+      "Automação em Python para organizar dados de vendas e gerar relatórios.",
     "projects.p1.tag.reports": "Relatórios",
     "projects.link.github": "Ver no GitHub",
     "projects.p2.imageAlt":
@@ -671,7 +674,7 @@ const translations = {
     "projects.p2.type": "Dados",
     "projects.p2.title": "Análise de Vendas com SQL",
     "projects.p2.desc":
-      "Consultas SQL para investigar faturamento, produtos mais vendidos e comportamento de clientes.",
+      "Consultas SQL para analisar vendas e encontrar insights.",
     "projects.p2.tag.analysis": "Análise",
     "projects.p2.tag.insights": "Insights",
     "projects.p3.imageAlt": "Tela do jogo da cobrinha em Python",
@@ -679,7 +682,7 @@ const translations = {
     "projects.p3.type": "Lógica",
     "projects.p3.title": "Jogo da Cobrinha",
     "projects.p3.desc":
-      "Jogo em Python para praticar eventos, colisões, pontuação e organização de fluxo.",
+      "Jogo em Python com eventos, colisões e pontuação.",
     "projects.p3.tag.gameloop": "Game loop",
     "projects.p3.tag.logic": "Lógica",
     "projects.p4.imageAlt": "Tela do projeto calculadora em Python",
@@ -687,53 +690,54 @@ const translations = {
     "projects.p4.type": "Fundamentos",
     "projects.p4.title": "Calculadora",
     "projects.p4.desc":
-      "Aplicação criada para praticar funções, entrada de dados, operações matemáticas e validação básica.",
+      "Calculadora em Python para praticar funções e validações.",
     "projects.p4.tag.functions": "Funções",
     "projects.p4.tag.operations": "Operações",
     "projects.finora.status": "Em desenvolvimento",
     "projects.finora.type": "Projeto pessoal",
-    "projects.finora.desc": "Dashboard pessoal de investimentos em desenvolvimento, criado para reunir informações da carteira e acompanhar ativos em uma única interface.",
+    "projects.finora.desc":
+      "Dashboard de investimentos para acompanhar carteira e ativos.",
     "projects.finora.note": "Detalhes em breve",
 
     "skills.kickerWord": "HABILIDADES",
     "skills.title":
       'Experiência <span>técnica</span>',
     "skills.subtitle":
-      "Tecnologias que estou estudando e aplicando em projetos pessoais.",
+      "Tecnologias que estudo e utilizo nos meus projetos.",
     "skills.category.language": "Linguagem",
     "skills.python.desc":
-      "Lógica de programação, scripts de automação e introdução ao desenvolvimento back-end com Python.",
+      "Scripts, automação e fundamentos de Backend.",
     "skills.typescript.desc":
-      "Realizando curso de TypeScript, aprendendo tipagem estática e boas práticas de desenvolvimento orientado a tipos.",
+      "Tipagem estática e desenvolvimento com TypeScript.",
     "skills.category.versioning": "Versionamento",
     "skills.git.desc":
-      "Controle de versão, criação de repositórios, commits e versionamento de projetos com Git e GitHub.",
+      "Commits, branches e repositórios no GitHub.",
     "skills.category.fundamentals": "Fundamentos",
     "skills.logic.title": "Lógica de Programação",
     "skills.logic.desc":
-      "Estudo de algoritmos, estruturas de controle e resolução de problemas com raciocínio lógico estruturado.",
+      "Algoritmos, condições, repetições e resolução de problemas.",
 
     "journey.kicker": "Jornada",
     "journey.title":
       'O caminho que estou <span>construindo.</span>',
     "journey.intro":
-      "Minha evolução acontece por etapas: primeiro construo projetos, depois aprofundo meus conhecimentos e me preparo para transformar aprendizado em experiência profissional.",
+      "Minha trajetória de estudos e projetos em desenvolvimento.",
     "journey.step1.stage": "Agora",
     "journey.step1.status": "Em andamento",
     "journey.step1.title": "Projetos práticos no GitHub",
     "journey.step1.desc":
-      "Organizando repositórios, melhorando descrições e criando soluções com Python e SQL.",
+      "Projetos pessoais e repositórios no GitHub.",
     "journey.step2.stage": "Estudos",
     "journey.step2.label": "Evolução contínua",
     "journey.step2.title": "Python, dados e web",
     "journey.step2.desc":
-      "Consolidando lógica, consultas, estrutura de páginas e boas práticas de versionamento.",
+      "Aprofundando Python, TypeScript, SQL e desenvolvimento web.",
     "journey.tag.data": "Dados",
     "journey.tag.web": "Web",
     "journey.step3.label": "Próximo marco",
     "journey.step3.title": "Conclusão do Ensino Médio",
     "journey.step3.desc":
-      "Preparação para entrar no mercado como estagiário ou profissional júnior em formação.",
+      "Preparação para iniciar a graduação e atuar em tecnologia.",
     "journey.tag.internship": "Estágio",
     "journey.tag.tech": "Tecnologia",
     "journey.tag.career": "Carreira",
@@ -746,7 +750,7 @@ const translations = {
     "contact.title":
       'Vamos conversar sobre <span>uma oportunidade?</span>',
     "contact.text":
-      "Preencha o formulário e a mensagem será enviada diretamente para o meu e-mail. Responderei utilizando o endereço informado.",
+      "Entre em contato pelo formulário ou pelas minhas redes profissionais.",
     "contact.step1.title": "Envie sua mensagem",
     "contact.step1.desc":
       "Informe os detalhes da oportunidade ou projeto.",
@@ -855,12 +859,12 @@ const translations = {
     "about.title":
       'I learn by building,<span>testing and evolving.</span>',
     "about.subtitle":
-      "I am focusing my studies on software development through technical fundamentals, personal projects and continuous learning.",
+      "Software development student. I learn by building projects and solving problems.",
     "about.storyLabel": "My story",
     "about.quote":
       '"My way of learning is turning theory into something that really works."',
     "about.story.p1":
-      "I expect to complete high school in 2026 and plan to continue studying technology at university, with an interest in Software Engineering. I have been studying Python, TypeScript, SQL, Git and application development.",
+      "Finishing high school in 2026. Studying Python, TypeScript, SQL and Software Engineering.",
     "about.story.p2":
       "I am also studying English and looking for an internship or entry-level development opportunity where I can learn from a team, contribute to real tasks and grow professionally.",
     "about.principle.learn.title": "Learn",
@@ -873,7 +877,7 @@ const translations = {
     "about.focus.label": "Current focus",
     "about.focus.title": "Backend, APIs and applications",
     "about.focus.desc":
-      "Developing a technical foundation to create solutions, work with information and solve problems using programming.",
+      "Building applications and APIs focused on Backend.",
     "about.focus.code.foco": "<i>focus</i> = \"Backend + APIs\"",
     "about.focus.code.objective":
       "<i>objective</i> = \"First opportunity\"",
@@ -881,19 +885,22 @@ const translations = {
       "<i>profile</i> = \"Practical learning\"",
     "about.info.education.label": "Education",
     "about.info.education.title": "High School",
-    "about.info.education.desc": "Expected graduation in 2026.",
+    "about.info.education.desc":
+      "Graduating in 2026.",
     "about.info.goal.label": "Goal",
     "about.info.goal.title": "First opportunity",
-    "about.info.goal.desc": "Internship or junior role in technology.",
+    "about.info.goal.desc":
+      "Software development internship.",
     "about.info.diff.label": "Differential",
     "about.info.diff.title": "Practical learning",
-    "about.info.diff.desc": "Projects, organization and continuous improvement.",
+    "about.info.diff.desc":
+      "Personal projects on GitHub.",
 
     "projects.kicker": "Projects",
     "projects.title":
       'Projects that show <span>progress in code</span>, data and delivery.',
     "projects.desc":
-      "This section now works as a technical showcase: each project highlights the solved problem, the technology used and the type of skill it proves for anyone reviewing your profile.",
+      "Practical projects, technologies used and code on GitHub.",
     "projects.proof.logic": "Applied logic",
     "projects.proof.data": "Data and queries",
     "projects.proof.automation": "Practical automation",
@@ -914,7 +921,7 @@ const translations = {
     "projects.p1.type": "Automation",
     "projects.p1.title": "Sales Report Automation",
     "projects.p1.desc":
-      "Python script that reads sales data, calculates metrics and organizes results into a report. Shows logic, file handling and focus on productivity.",
+      "Python automation to organize sales data and generate reports.",
     "projects.p1.tag.reports": "Reports",
     "projects.link.github": "See on GitHub",
     "projects.p2.imageAlt":
@@ -923,7 +930,7 @@ const translations = {
     "projects.p2.type": "Data",
     "projects.p2.title": "Sales Analysis with SQL",
     "projects.p2.desc":
-      "SQL queries to investigate revenue, best-selling products and customer behavior.",
+      "SQL queries to analyze sales and find insights.",
     "projects.p2.tag.analysis": "Analysis",
     "projects.p2.tag.insights": "Insights",
     "projects.p3.imageAlt": "Screenshot of the Snake game in Python",
@@ -931,7 +938,7 @@ const translations = {
     "projects.p3.type": "Logic",
     "projects.p3.title": "Snake Game",
     "projects.p3.desc":
-      "Python game to practice events, collisions, scoring and flow organization.",
+      "Python game with events, collisions and scoring.",
     "projects.p3.tag.gameloop": "Game loop",
     "projects.p3.tag.logic": "Logic",
     "projects.p4.imageAlt": "Screenshot of the calculator project in Python",
@@ -939,53 +946,54 @@ const translations = {
     "projects.p4.type": "Fundamentals",
     "projects.p4.title": "Calculator",
     "projects.p4.desc":
-      "Application created to practice functions, data input, math operations and basic validation.",
+      "Python calculator to practice functions and validation.",
     "projects.p4.tag.functions": "Functions",
     "projects.p4.tag.operations": "Operations",
     "projects.finora.status": "In development",
     "projects.finora.type": "Personal project",
-    "projects.finora.desc": "A personal investment dashboard in development, designed to bring portfolio information together and track assets in one interface.",
+    "projects.finora.desc":
+      "Investment dashboard to track a portfolio and assets.",
     "projects.finora.note": "More details soon",
 
     "skills.kickerWord": "SKILLS",
     "skills.title":
       'Technical <span>experience</span>',
     "skills.subtitle":
-      "Technologies I am studying and applying in personal projects.",
+      "Technologies I study and use in my projects.",
     "skills.category.language": "Language",
     "skills.python.desc":
-      "Programming logic, automation scripts and introduction to back-end development with Python.",
+      "Scripting, automation and Backend fundamentals.",
     "skills.typescript.desc":
-      "Taking a TypeScript course, learning static typing and good type-driven development practices.",
+      "Static typing and development with TypeScript.",
     "skills.category.versioning": "Versioning",
     "skills.git.desc":
-      "Version control, repository creation, commits and project versioning with Git and GitHub.",
+      "Commits, branches and GitHub repositories.",
     "skills.category.fundamentals": "Fundamentals",
     "skills.logic.title": "Programming Logic",
     "skills.logic.desc":
-      "Study of algorithms, control structures and problem solving with structured logical reasoning.",
+      "Algorithms, conditionals, loops and problem solving.",
 
     "journey.kicker": "Journey",
     "journey.title":
       'The path I am <span>building.</span>',
     "journey.intro":
-      "My evolution happens in stages: first I build projects, then I deepen my knowledge and prepare to turn learning into professional experience.",
+      "My learning journey and projects in progress.",
     "journey.step1.stage": "Now",
     "journey.step1.status": "In progress",
     "journey.step1.title": "Practical projects on GitHub",
     "journey.step1.desc":
-      "Organizing repositories, improving descriptions and creating solutions with Python and SQL.",
+      "Personal projects and GitHub repositories.",
     "journey.step2.stage": "Studies",
     "journey.step2.label": "Continuous growth",
     "journey.step2.title": "Python, data and web",
     "journey.step2.desc":
-      "Consolidating logic, queries, page structure and best versioning practices.",
+      "Deepening my knowledge of Python, TypeScript, SQL and web development.",
     "journey.tag.data": "Data",
     "journey.tag.web": "Web",
     "journey.step3.label": "Next milestone",
     "journey.step3.title": "High School graduation",
     "journey.step3.desc":
-      "Preparation to enter the market as an intern or junior professional in training.",
+      "Preparing to start college and work in technology.",
     "journey.tag.internship": "Internship",
     "journey.tag.tech": "Technology",
     "journey.tag.career": "Career",
@@ -998,7 +1006,7 @@ const translations = {
     "contact.title":
       'Let’s talk about <span>an opportunity?</span>',
     "contact.text":
-      "Fill out the form and the message will be sent directly to my email. I will reply using the address provided.",
+      "Contact me using the form or my professional profiles.",
     "contact.step1.title": "Send your message",
     "contact.step1.desc":
       "Provide details about the opportunity or project.",
@@ -1107,12 +1115,12 @@ const translations = {
     "about.title":
       'Aprendo construyendo,<span>probando y evolucionando.</span>',
     "about.subtitle":
-      "Estoy enfocando mis estudios en el desarrollo de software mediante fundamentos técnicos, proyectos personales y aprendizaje continuo.",
+      "Estudiante de desarrollo de software. Aprendo creando proyectos y resolviendo problemas.",
     "about.storyLabel": "Mi historia",
     "about.quote":
       '"Mi forma de aprender es transformar la teoría en algo que realmente funciona."',
     "about.story.p1":
-      "Espero terminar la educación secundaria en 2026 y planeo continuar estudiando tecnología en la universidad, con interés en Ingeniería de Software. Estoy estudiando Python, TypeScript, SQL, Git y desarrollo de aplicaciones.",
+      "Termino la educación secundaria en 2026. Estudio Python, TypeScript, SQL e Ingeniería de Software.",
     "about.story.p2":
       "También estoy estudiando inglés y busco una oportunidad de prácticas o de inicio de carrera en desarrollo, donde pueda aprender de un equipo, contribuir con tareas reales y crecer profesionalmente.",
     "about.principle.learn.title": "Aprender",
@@ -1125,7 +1133,7 @@ const translations = {
     "about.focus.label": "Enfoque actual",
     "about.focus.title": "Backend, APIs y aplicaciones",
     "about.focus.desc":
-      "Desarrollando una base técnica para crear soluciones, trabajar con información y resolver problemas utilizando programación.",
+      "Desarrollando aplicaciones y APIs con enfoque Backend.",
     "about.focus.code.foco": "<i>foco</i> = \"Backend + APIs\"",
     "about.focus.code.objective":
       "<i>objetivo</i> = \"Primera oportunidad\"",
@@ -1133,19 +1141,22 @@ const translations = {
       "<i>perfil</i> = \"Aprendizaje práctico\"",
     "about.info.education.label": "Formación",
     "about.info.education.title": "Escuela secundaria",
-    "about.info.education.desc": "Finalización prevista para 2026.",
+    "about.info.education.desc":
+      "Finalización en 2026.",
     "about.info.goal.label": "Objetivo",
     "about.info.goal.title": "Primera oportunidad",
-    "about.info.goal.desc": "Prácticas o puesto junior en tecnología.",
+    "about.info.goal.desc":
+      "Prácticas en desarrollo de software.",
     "about.info.diff.label": "Diferencial",
     "about.info.diff.title": "Aprendizaje práctico",
-    "about.info.diff.desc": "Proyectos, organización y evolución continua.",
+    "about.info.diff.desc":
+      "Proyectos propios en GitHub.",
 
     "projects.kicker": "Proyectos",
     "projects.title":
       'Proyectos que muestran <span>evolución en código</span>, datos y entrega.',
     "projects.desc":
-      "Esta área ahora funciona como una vitrina técnica: cada proyecto destaca el problema resuelto, la tecnología usada y el tipo de habilidad que demuestra para quien revisa tu perfil.",
+      "Proyectos prácticos, tecnologías utilizadas y código en GitHub.",
     "projects.proof.logic": "Lógica aplicada",
     "projects.proof.data": "Datos y consultas",
     "projects.proof.automation": "Automatización práctica",
@@ -1166,7 +1177,7 @@ const translations = {
     "projects.p1.type": "Automatización",
     "projects.p1.title": "Automatización de informe de ventas",
     "projects.p1.desc":
-      "Script en Python que lee datos de ventas, calcula indicadores y organiza resultados en un informe. Muestra lógica, manipulación de archivos y enfoque en productividad.",
+      "Automatización en Python para organizar ventas y generar informes.",
     "projects.p1.tag.reports": "Informes",
     "projects.link.github": "Ver en GitHub",
     "projects.p2.imageAlt":
@@ -1175,7 +1186,7 @@ const translations = {
     "projects.p2.type": "Datos",
     "projects.p2.title": "Análisis de ventas con SQL",
     "projects.p2.desc":
-      "Consultas SQL para investigar ingresos, productos más vendidos y comportamiento de clientes.",
+      "Consultas SQL para analizar ventas y encontrar información útil.",
     "projects.p2.tag.analysis": "Análisis",
     "projects.p2.tag.insights": "Insights",
     "projects.p3.imageAlt": "Pantalla del juego de la serpiente en Python",
@@ -1183,7 +1194,7 @@ const translations = {
     "projects.p3.type": "Lógica",
     "projects.p3.title": "Juego de la serpiente",
     "projects.p3.desc":
-      "Juego en Python para practicar eventos, colisiones, puntuación y organización del flujo.",
+      "Juego en Python con eventos, colisiones y puntuación.",
     "projects.p3.tag.gameloop": "Bucle de juego",
     "projects.p3.tag.logic": "Lógica",
     "projects.p4.imageAlt": "Pantalla del proyecto calculadora en Python",
@@ -1191,53 +1202,54 @@ const translations = {
     "projects.p4.type": "Fundamentos",
     "projects.p4.title": "Calculadora",
     "projects.p4.desc":
-      "Aplicación creada para practicar funciones, entrada de datos, operaciones matemáticas y validación básica.",
+      "Calculadora en Python para practicar funciones y validaciones.",
     "projects.p4.tag.functions": "Funciones",
     "projects.p4.tag.operations": "Operaciones",
     "projects.finora.status": "En desarrollo",
     "projects.finora.type": "Proyecto personal",
-    "projects.finora.desc": "Panel personal de inversiones en desarrollo, creado para reunir información de la cartera y seguir activos en una sola interfaz.",
+    "projects.finora.desc":
+      "Panel de inversiones para seguir una cartera y sus activos.",
     "projects.finora.note": "Más detalles pronto",
 
     "skills.kickerWord": "HABILIDADES",
     "skills.title":
       'Experiencia <span>técnica</span>',
     "skills.subtitle":
-      "Tecnologías que estoy estudiando y aplicando en proyectos personales.",
+      "Tecnologías que estudio y utilizo en mis proyectos.",
     "skills.category.language": "Lenguaje",
     "skills.python.desc":
-      "Lógica de programación, scripts de automatización e introducción al desarrollo back-end con Python.",
+      "Scripts, automatización y fundamentos de Backend.",
     "skills.typescript.desc":
-      "Realizando un curso de TypeScript, aprendiendo tipado estático y buenas prácticas de desarrollo orientado a tipos.",
+      "Tipado estático y desarrollo con TypeScript.",
     "skills.category.versioning": "Versionamiento",
     "skills.git.desc":
-      "Control de versiones, creación de repositorios, commits y versionamiento de proyectos con Git y GitHub.",
+      "Commits, ramas y repositorios en GitHub.",
     "skills.category.fundamentals": "Fundamentos",
     "skills.logic.title": "Lógica de programación",
     "skills.logic.desc":
-      "Estudio de algoritmos, estructuras de control y resolución de problemas con razonamiento lógico estructurado.",
+      "Algoritmos, condiciones, bucles y resolución de problemas.",
 
     "journey.kicker": "Jornada",
     "journey.title":
       'El camino que estoy <span>construyendo.</span>',
     "journey.intro":
-      "Mi evolución ocurre por etapas: primero construyo proyectos, luego profundizo mis conocimientos y me preparo para transformar el aprendizaje en experiencia profesional.",
+      "Mi recorrido de aprendizaje y proyectos en desarrollo.",
     "journey.step1.stage": "Ahora",
     "journey.step1.status": "En progreso",
     "journey.step1.title": "Proyectos prácticos en GitHub",
     "journey.step1.desc":
-      "Organizando repositorios, mejorando descripciones y creando soluciones con Python y SQL.",
+      "Proyectos personales y repositorios en GitHub.",
     "journey.step2.stage": "Estudios",
     "journey.step2.label": "Evolución continua",
     "journey.step2.title": "Python, datos y web",
     "journey.step2.desc":
-      "Consolidando lógica, consultas, estructura de páginas y buenas prácticas de versionamiento.",
+      "Profundizando en Python, TypeScript, SQL y desarrollo web.",
     "journey.tag.data": "Datos",
     "journey.tag.web": "Web",
     "journey.step3.label": "Próximo hito",
     "journey.step3.title": "Finalización de la escuela secundaria",
     "journey.step3.desc":
-      "Preparación para ingresar al mercado como pasante o profesional junior en formación.",
+      "Preparándome para comenzar la universidad y trabajar en tecnología.",
     "journey.tag.internship": "Pasantía",
     "journey.tag.tech": "Tecnología",
     "journey.tag.career": "Carrera",
@@ -1250,7 +1262,7 @@ const translations = {
     "contact.title":
       'Hablemos sobre <span>una oportunidad?</span>',
     "contact.text":
-      "Completa el formulario y el mensaje se enviará directamente a mi correo electrónico. Responderé usando la dirección proporcionada.",
+      "Contáctame mediante el formulario o mis perfiles profesionales.",
     "contact.step1.title": "Envía tu mensaje",
     "contact.step1.desc":
       "Indica los detalles de la oportunidad o proyecto.",
